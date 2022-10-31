@@ -8,22 +8,46 @@
 
 /* Begin PBXBuildFile section */
 		24280552290BE30900A10601 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24280551290BE30900A10601 /* AppDelegate.swift */; };
-		24280554290BE30900A10601 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24280553290BE30900A10601 /* SceneDelegate.swift */; };
-		24280556290BE30900A10601 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24280555290BE30900A10601 /* ViewController.swift */; };
-		24280559290BE30900A10601 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24280557290BE30900A10601 /* Main.storyboard */; };
+		24280556290BE30900A10601 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24280555290BE30900A10601 /* LoginViewController.swift */; };
+		24280559290BE30900A10601 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24280557290BE30900A10601 /* Auth.storyboard */; };
 		2428055B290BE30A00A10601 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2428055A290BE30A00A10601 /* Assets.xcassets */; };
 		2428055E290BE30A00A10601 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2428055C290BE30A00A10601 /* LaunchScreen.storyboard */; };
+		243536DF290FDBFD0014DF4B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243536DE290FDBFD0014DF4B /* LoginView.swift */; };
+		243536E1290FDC0A0014DF4B /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243536E0290FDC0A0014DF4B /* LoginPresenter.swift */; };
+		245EAC4E290FEA28009CDEC3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EAC4D290FEA28009CDEC3 /* TabBarViewController.swift */; };
+		245EAC50290FEA75009CDEC3 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245EAC4F290FEA75009CDEC3 /* Calendar.storyboard */; };
+		245EAC53290FEA88009CDEC3 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245EAC52290FEA88009CDEC3 /* Chat.storyboard */; };
+		245EAC55291000E4009CDEC3 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EAC54291000E4009CDEC3 /* HomePresenter.swift */; };
+		245EAC57291001E6009CDEC3 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EAC56291001E6009CDEC3 /* ChatViewController.swift */; };
+		245EAC59291001F4009CDEC3 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EAC58291001F4009CDEC3 /* CalendarViewController.swift */; };
+		24E67BCE290BEF8800DEBE16 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E67BCD290BEF8800DEBE16 /* LoginModel.swift */; };
+		24F0CC97290FC76F00E16B2F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24F0CC96290FC76F00E16B2F /* Home.storyboard */; };
+		24F0CC99290FC7B900E16B2F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0CC98290FC7B900E16B2F /* HomeViewController.swift */; };
+		9912116C0C1C77418D45C44E /* Pods_LockerRoom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 959A84C80D6F2BFD04CF64F1 /* Pods_LockerRoom.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2428054E290BE30900A10601 /* LockerRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LockerRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24280551290BE30900A10601 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		24280553290BE30900A10601 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		24280555290BE30900A10601 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		24280558290BE30900A10601 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		24280555290BE30900A10601 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		24280558290BE30900A10601 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
 		2428055A290BE30A00A10601 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2428055D290BE30A00A10601 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2428055F290BE30A00A10601 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		243536DE290FDBFD0014DF4B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		243536E0290FDC0A0014DF4B /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		245EAC4D290FEA28009CDEC3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		245EAC4F290FEA75009CDEC3 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		245EAC52290FEA88009CDEC3 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		245EAC54291000E4009CDEC3 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		245EAC56291001E6009CDEC3 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		245EAC58291001F4009CDEC3 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		24E67BCD290BEF8800DEBE16 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		24F0CC96290FC76F00E16B2F /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		24F0CC98290FC7B900E16B2F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		437A183293CDA5ECDEA968E9 /* Pods-LockerRoom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LockerRoom.debug.xcconfig"; path = "Target Support Files/Pods-LockerRoom/Pods-LockerRoom.debug.xcconfig"; sourceTree = "<group>"; };
+		4EB95B0CD714ED85DE5365DE /* Pods-LockerRoom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LockerRoom.release.xcconfig"; path = "Target Support Files/Pods-LockerRoom/Pods-LockerRoom.release.xcconfig"; sourceTree = "<group>"; };
+		959A84C80D6F2BFD04CF64F1 /* Pods_LockerRoom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LockerRoom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9912116C0C1C77418D45C44E /* Pods_LockerRoom.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +67,8 @@
 			children = (
 				24280550290BE30900A10601 /* LockerRoom */,
 				2428054F290BE30900A10601 /* Products */,
+				C504814BECF1C6367136F83E /* Pods */,
+				472AA541EA83EFD976B24436 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +83,106 @@
 		24280550290BE30900A10601 /* LockerRoom */ = {
 			isa = PBXGroup;
 			children = (
-				24280551290BE30900A10601 /* AppDelegate.swift */,
-				24280553290BE30900A10601 /* SceneDelegate.swift */,
-				24280555290BE30900A10601 /* ViewController.swift */,
-				24280557290BE30900A10601 /* Main.storyboard */,
-				2428055A290BE30A00A10601 /* Assets.xcassets */,
-				2428055C290BE30A00A10601 /* LaunchScreen.storyboard */,
-				2428055F290BE30A00A10601 /* Info.plist */,
+				243536D8290FDB910014DF4B /* AppDelegate */,
+				243536DA290FDB9F0014DF4B /* Assets */,
+				243536DB290FDBA40014DF4B /* Misc */,
+				243536D9290FDB990014DF4B /* Models */,
+				243536D6290FDB810014DF4B /* Storyboards */,
+				243536D7290FDB880014DF4B /* MVP */,
 			);
 			path = LockerRoom;
+			sourceTree = "<group>";
+		};
+		243536D6290FDB810014DF4B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				24F0CC96290FC76F00E16B2F /* Home.storyboard */,
+				24280557290BE30900A10601 /* Auth.storyboard */,
+				2428055C290BE30A00A10601 /* LaunchScreen.storyboard */,
+				245EAC4F290FEA75009CDEC3 /* Calendar.storyboard */,
+				245EAC52290FEA88009CDEC3 /* Chat.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		243536D7290FDB880014DF4B /* MVP */ = {
+			isa = PBXGroup;
+			children = (
+				243536DC290FDBC80014DF4B /* LoginMVP */,
+				243536DD290FDBCE0014DF4B /* HomeMVP */,
+			);
+			path = MVP;
+			sourceTree = "<group>";
+		};
+		243536D8290FDB910014DF4B /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				24280551290BE30900A10601 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		243536D9290FDB990014DF4B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				24E67BCD290BEF8800DEBE16 /* LoginModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		243536DA290FDB9F0014DF4B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2428055A290BE30A00A10601 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		243536DB290FDBA40014DF4B /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				2428055F290BE30A00A10601 /* Info.plist */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		243536DC290FDBC80014DF4B /* LoginMVP */ = {
+			isa = PBXGroup;
+			children = (
+				24280555290BE30900A10601 /* LoginViewController.swift */,
+				243536DE290FDBFD0014DF4B /* LoginView.swift */,
+				243536E0290FDC0A0014DF4B /* LoginPresenter.swift */,
+			);
+			path = LoginMVP;
+			sourceTree = "<group>";
+		};
+		243536DD290FDBCE0014DF4B /* HomeMVP */ = {
+			isa = PBXGroup;
+			children = (
+				24F0CC98290FC7B900E16B2F /* HomeViewController.swift */,
+				245EAC4D290FEA28009CDEC3 /* TabBarViewController.swift */,
+				245EAC54291000E4009CDEC3 /* HomePresenter.swift */,
+				245EAC56291001E6009CDEC3 /* ChatViewController.swift */,
+				245EAC58291001F4009CDEC3 /* CalendarViewController.swift */,
+			);
+			path = HomeMVP;
+			sourceTree = "<group>";
+		};
+		472AA541EA83EFD976B24436 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				959A84C80D6F2BFD04CF64F1 /* Pods_LockerRoom.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C504814BECF1C6367136F83E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				437A183293CDA5ECDEA968E9 /* Pods-LockerRoom.debug.xcconfig */,
+				4EB95B0CD714ED85DE5365DE /* Pods-LockerRoom.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +192,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24280562290BE30A00A10601 /* Build configuration list for PBXNativeTarget "LockerRoom" */;
 			buildPhases = (
+				791B1287AAFB1C568C1AC33F /* [CP] Check Pods Manifest.lock */,
 				2428054A290BE30900A10601 /* Sources */,
 				2428054B290BE30900A10601 /* Frameworks */,
 				2428054C290BE30900A10601 /* Resources */,
+				14E2ACDE4AA10A6BFF3E4B9A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,34 +245,86 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				245EAC53290FEA88009CDEC3 /* Chat.storyboard in Resources */,
 				2428055E290BE30A00A10601 /* LaunchScreen.storyboard in Resources */,
 				2428055B290BE30A00A10601 /* Assets.xcassets in Resources */,
-				24280559290BE30900A10601 /* Main.storyboard in Resources */,
+				24280559290BE30900A10601 /* Auth.storyboard in Resources */,
+				245EAC50290FEA75009CDEC3 /* Calendar.storyboard in Resources */,
+				24F0CC97290FC76F00E16B2F /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14E2ACDE4AA10A6BFF3E4B9A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LockerRoom/Pods-LockerRoom-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LockerRoom/Pods-LockerRoom-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LockerRoom/Pods-LockerRoom-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		791B1287AAFB1C568C1AC33F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LockerRoom-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2428054A290BE30900A10601 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24280556290BE30900A10601 /* ViewController.swift in Sources */,
+				245EAC59291001F4009CDEC3 /* CalendarViewController.swift in Sources */,
+				243536E1290FDC0A0014DF4B /* LoginPresenter.swift in Sources */,
+				24280556290BE30900A10601 /* LoginViewController.swift in Sources */,
+				24E67BCE290BEF8800DEBE16 /* LoginModel.swift in Sources */,
 				24280552290BE30900A10601 /* AppDelegate.swift in Sources */,
-				24280554290BE30900A10601 /* SceneDelegate.swift in Sources */,
+				245EAC4E290FEA28009CDEC3 /* TabBarViewController.swift in Sources */,
+				243536DF290FDBFD0014DF4B /* LoginView.swift in Sources */,
+				24F0CC99290FC7B900E16B2F /* HomeViewController.swift in Sources */,
+				245EAC57291001E6009CDEC3 /* ChatViewController.swift in Sources */,
+				245EAC55291000E4009CDEC3 /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		24280557290BE30900A10601 /* Main.storyboard */ = {
+		24280557290BE30900A10601 /* Auth.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				24280558290BE30900A10601 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Auth.storyboard;
 			sourceTree = "<group>";
 		};
 		2428055C290BE30A00A10601 /* LaunchScreen.storyboard */ = {
@@ -282,6 +454,7 @@
 		};
 		24280563290BE30A00A10601 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 437A183293CDA5ECDEA968E9 /* Pods-LockerRoom.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -289,10 +462,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D6UJKFK6N4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LockerRoom/Info.plist;
+				INFOPLIST_FILE = LockerRoom/Misc/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -310,6 +483,7 @@
 		};
 		24280564290BE30A00A10601 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EB95B0CD714ED85DE5365DE /* Pods-LockerRoom.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -317,10 +491,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D6UJKFK6N4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LockerRoom/Info.plist;
+				INFOPLIST_FILE = LockerRoom/Misc/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

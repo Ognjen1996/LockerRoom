@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="LockerRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="LoginView" customModule="LockerRoom" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="czv" translatesAutoresizingMaskIntoConstraints="NO" id="k8s-dP-oFp">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rcP-KM-Qnw">
+                                <rect key="frame" x="16" y="97" width="358" height="34"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.84159757654081646" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d3M-FN-b9H">
+                                <rect key="frame" x="16" y="147" width="358" height="34"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.8415975765" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1DE-yY-3dl">
+                                <rect key="frame" x="16" y="277" width="358" height="35"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.60451211734693877" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="k8s-dP-oFp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0jV-IE-hPT"/>
+                            <constraint firstAttribute="bottom" secondItem="k8s-dP-oFp" secondAttribute="bottom" id="45B-d6-SDL"/>
+                            <constraint firstItem="d3M-FN-b9H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4YX-lP-DrW"/>
+                            <constraint firstItem="rcP-KM-Qnw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9rp-vN-zDt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d3M-FN-b9H" secondAttribute="trailing" constant="16" id="AyQ-Zc-s94"/>
+                            <constraint firstAttribute="trailing" secondItem="k8s-dP-oFp" secondAttribute="trailing" id="LxC-Pg-2YO"/>
+                            <constraint firstItem="1DE-yY-3dl" firstAttribute="trailing" secondItem="rcP-KM-Qnw" secondAttribute="trailing" id="Oup-pm-d6N"/>
+                            <constraint firstItem="1DE-yY-3dl" firstAttribute="leading" secondItem="rcP-KM-Qnw" secondAttribute="leading" id="cth-tj-i3A"/>
+                            <constraint firstItem="d3M-FN-b9H" firstAttribute="width" secondItem="rcP-KM-Qnw" secondAttribute="width" id="dNf-6q-wfQ"/>
+                            <constraint firstItem="rcP-KM-Qnw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="i1k-tV-XgU"/>
+                            <constraint firstItem="k8s-dP-oFp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nMe-Mq-CYd"/>
+                            <constraint firstItem="rcP-KM-Qnw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="pph-yi-GF6"/>
+                            <constraint firstItem="d3M-FN-b9H" firstAttribute="top" secondItem="rcP-KM-Qnw" secondAttribute="bottom" constant="16" id="rZc-my-fgY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rcP-KM-Qnw" secondAttribute="trailing" constant="16" id="twK-JR-ehk"/>
+                            <constraint firstItem="1DE-yY-3dl" firstAttribute="top" secondItem="rcP-KM-Qnw" secondAttribute="bottom" constant="146" id="wvB-9V-pL2"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="loginButton" destination="1DE-yY-3dl" id="zAC-3p-IOT"/>
+                            <outlet property="passwordTextField" destination="d3M-FN-b9H" id="mJl-Yc-iu0"/>
+                            <outlet property="usernameTextField" destination="rcP-KM-Qnw" id="E9G-yC-GBd"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-54" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="czv" width="1080" height="635"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
