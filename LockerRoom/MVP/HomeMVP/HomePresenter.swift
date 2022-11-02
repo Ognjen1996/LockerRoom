@@ -6,24 +6,47 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+
+protocol HomePresenenterDelegate: AnyObject {
+    func homePresenter(_ presenter: HomePresenter, data: PlayerModel )
+}
 
 class HomePresenter: UIViewController {
 
+    weak var delegate: HomePresenenterDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       
     }
-    
+    func fetchData() {
+        let baseURL = "https://app.lockerroomsystem.com/api/player/1"
+        guard let url = URL(string: baseURL) else {return}
+        var request = URLRequest(url: url)
+        request.headers = ["Content-Type": "application/json"]; ["Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hcHAubG9ja2Vycm9vbXN5c3RlbS5jb21cL2FwaVwvYXV0aFwvbG9naW4iLCJpYXQiOjE2NjczNzg4NzUsImV4cCI6MTY2Nzk3ODg3NSwibmJmIjoxNjY3Mzc4ODc1LCJqdGkiOiI0d2RmUDQybXBxZ1RWeUdqIiwic3ViIjo0OSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSIsImlkIjo0OSwibmFtZSI6IkFkbWluIiwiZW1haWwiOiJvZmZpY2VAb2N0YXNvbHV0aW9ucy5iaXoiLCJpbWFnZSI6bnVsbH0.I9mUfjTL5e36YZVpG5A3S4M41CgqDbjh7vDOov-JiuI"]
+        request.method = .get
+        AF.request(request).responseJSON { [weak self] (data) in
+            guard let self = self else { return }
+            switch data.result {
+            case .success(let dataJson):
+                let json = JSON(dataJson)
+                    debugPrint(json)
+                do {
+                    guard let dataa = data.data else {return}
+                    let decoder = JSONDecoder()
+                    let parsedPlayer =  try decoder.decode(PlayerModel.self, from: dataa)
+                    self.delegate?.homePresenter(self, data: parsedPlayer)
+                } catch let error {
+                    print(error)
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+                }
+                
+            case .failure(let error):
+                break
+            }
+        }
     }
-    */
-
 }

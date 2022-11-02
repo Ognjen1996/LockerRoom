@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240F0737291105E50057F0CD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240F0736291105E50057F0CD /* HomeView.swift */; };
+		240F0739291108BE0057F0CD /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240F0738291108BE0057F0CD /* PlayerModel.swift */; };
 		24280552290BE30900A10601 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24280551290BE30900A10601 /* AppDelegate.swift */; };
 		24280556290BE30900A10601 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24280555290BE30900A10601 /* LoginViewController.swift */; };
 		24280559290BE30900A10601 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24280557290BE30900A10601 /* Auth.storyboard */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		240F0736291105E50057F0CD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		240F0738291108BE0057F0CD /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
 		2428054E290BE30900A10601 /* LockerRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LockerRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24280551290BE30900A10601 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24280555290BE30900A10601 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -96,11 +100,11 @@
 		243536D6290FDB810014DF4B /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				24F0CC96290FC76F00E16B2F /* Home.storyboard */,
 				24280557290BE30900A10601 /* Auth.storyboard */,
-				2428055C290BE30A00A10601 /* LaunchScreen.storyboard */,
+				24F0CC96290FC76F00E16B2F /* Home.storyboard */,
 				245EAC4F290FEA75009CDEC3 /* Calendar.storyboard */,
 				245EAC52290FEA88009CDEC3 /* Chat.storyboard */,
+				2428055C290BE30A00A10601 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -126,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				24E67BCD290BEF8800DEBE16 /* LoginModel.swift */,
+				240F0738291108BE0057F0CD /* PlayerModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -160,8 +165,9 @@
 			isa = PBXGroup;
 			children = (
 				24F0CC98290FC7B900E16B2F /* HomeViewController.swift */,
-				245EAC4D290FEA28009CDEC3 /* TabBarViewController.swift */,
+				240F0736291105E50057F0CD /* HomeView.swift */,
 				245EAC54291000E4009CDEC3 /* HomePresenter.swift */,
+				245EAC4D290FEA28009CDEC3 /* TabBarViewController.swift */,
 				245EAC56291001E6009CDEC3 /* ChatViewController.swift */,
 				245EAC58291001F4009CDEC3 /* CalendarViewController.swift */,
 			);
@@ -308,6 +314,8 @@
 				24280556290BE30900A10601 /* LoginViewController.swift in Sources */,
 				24E67BCE290BEF8800DEBE16 /* LoginModel.swift in Sources */,
 				24280552290BE30900A10601 /* AppDelegate.swift in Sources */,
+				240F0737291105E50057F0CD /* HomeView.swift in Sources */,
+				240F0739291108BE0057F0CD /* PlayerModel.swift in Sources */,
 				245EAC4E290FEA28009CDEC3 /* TabBarViewController.swift in Sources */,
 				243536DF290FDBFD0014DF4B /* LoginView.swift in Sources */,
 				24F0CC99290FC7B900E16B2F /* HomeViewController.swift in Sources */,

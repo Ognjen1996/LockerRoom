@@ -19,7 +19,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="czv" translatesAutoresizingMaskIntoConstraints="NO" id="k8s-dP-oFp">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rcP-KM-Qnw">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="office@octasolutions.biz" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rcP-KM-Qnw">
                                 <rect key="frame" x="16" y="97" width="358" height="34"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.84159757654081646" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -27,7 +27,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d3M-FN-b9H">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Octasolutions2020" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d3M-FN-b9H">
                                 <rect key="frame" x="16" y="147" width="358" height="34"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.8415975765" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
