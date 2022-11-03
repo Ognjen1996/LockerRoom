@@ -24,7 +24,7 @@ struct Data: Codable {
     var weight: String
     var age: Int
     var player_image: String
-    var leagues: Leagues
+    var leagues: [Leagues] = []
     var user_info: Info
     var position: Position
     var total: Total
