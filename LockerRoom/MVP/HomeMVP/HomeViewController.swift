@@ -24,7 +24,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupDelegates()
-//        presenter?.fetchData()
+        presenter?.fetchData()
         setup()
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -42,6 +42,12 @@ extension HomeViewController {
         homeView.setup(with: player)
     }
     
+   @IBAction private func showLeagues() {
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "LeaguesTableViewController") as! LeaguesTableViewController
+        show(vc, sender: self)
+    }
+    
     private func setupDelegates() {
         presenter?.delegate = self
     }
@@ -49,6 +55,7 @@ extension HomeViewController {
 extension HomeViewController: HomePresenenterDelegate {
     func homePresenter(_ presenter: HomePresenter, data: PlayerModel) {
         self.player = data
+        setup()
     }
     
     

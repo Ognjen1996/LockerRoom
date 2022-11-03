@@ -23,28 +23,25 @@ class HomePresenter: UIViewController {
 
        
     }
+    
     func fetchData() {
         let baseURL = "https://app.lockerroomsystem.com/api/player/1"
         guard let url = URL(string: baseURL) else {return}
         var request = URLRequest(url: url)
-        request.headers = ["Content-Type": "application/json", "Authorization": bearer]
         request.method = .get
-        AF.request(request).response { [weak self] (data) in
-            guard let self = self else { return }
-            switch data.result {
-            case .success(let dataJson):
-                let json = JSON(dataJson)
-                    debugPrint(json)
-                do {
-                    guard let dataa = dataJson else {return}
-                    let decoder = JSONDecoder()
-                    let parsedPlayer =  try decoder.decode(PlayerModel.self, from: dataa)
-                    self.delegate?.homePresenter(self, data: parsedPlayer)
-                } catch let error {
-                    print(error)
-                }
-            case .failure(let error):
-                break
+        request.headers = ["Content-Type": "application/json", "Authorization": bearer]
+        
+        AF.request(request).response { [weak self] response in
+            guard   let self = self,
+                    let data = response.data else { return }
+            do {
+                let decoder = JSONDecoder()
+                let userData = try decoder.decode(PlayerModel.self, from: data)
+                debugPrint(userData)
+                
+                self.delegate?.homePresenter(self, data: userData)
+            } catch let error {
+                debugPrint(error)
             }
         }
     }

@@ -19,13 +19,17 @@ class HomeView: UIView {
 
     
     func setup(with player: PlayerModel) {
-        nameLabel.text = player.data.first_name
+        nameLabel.text = player.data.first_name + " " + player.data.last_name + "\n #" + String(player.data.jersey_number)
         heightLabel.text = player.data.height
         positionLabel.text = player.data.position.name_small
         ageLabel.text = String(player.data.age)
         
         let url = URL(string: player.data.player_image)
+        playerPicture.layer.cornerRadius = playerPicture.frame.size.width/2
+//        let processor = RoundCornerImageProcessor(cornerRadius: 20)
+        playerPicture.clipsToBounds = true
         playerPicture.kf.setImage(with: url)
+
         
     }
 }
