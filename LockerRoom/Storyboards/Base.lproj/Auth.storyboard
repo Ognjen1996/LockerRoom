@@ -19,19 +19,23 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="czv" translatesAutoresizingMaskIntoConstraints="NO" id="k8s-dP-oFp">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OpU-mf-ePk">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.62039528145695366" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="office@octasolutions.biz" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rcP-KM-Qnw">
                                 <rect key="frame" x="16" y="97" width="358" height="34"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.84159757654081646" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Octasolutions2020" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d3M-FN-b9H">
                                 <rect key="frame" x="16" y="147" width="358" height="34"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.8415975765" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1DE-yY-3dl">
@@ -45,15 +49,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
+                            <constraint firstItem="OpU-mf-ePk" firstAttribute="trailing" secondItem="k8s-dP-oFp" secondAttribute="trailing" id="0CI-dZ-5Xv"/>
                             <constraint firstItem="k8s-dP-oFp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0jV-IE-hPT"/>
+                            <constraint firstItem="OpU-mf-ePk" firstAttribute="bottom" secondItem="k8s-dP-oFp" secondAttribute="bottom" id="1vn-st-ozo"/>
                             <constraint firstAttribute="bottom" secondItem="k8s-dP-oFp" secondAttribute="bottom" id="45B-d6-SDL"/>
                             <constraint firstItem="d3M-FN-b9H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4YX-lP-DrW"/>
                             <constraint firstItem="rcP-KM-Qnw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9rp-vN-zDt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d3M-FN-b9H" secondAttribute="trailing" constant="16" id="AyQ-Zc-s94"/>
                             <constraint firstAttribute="trailing" secondItem="k8s-dP-oFp" secondAttribute="trailing" id="LxC-Pg-2YO"/>
                             <constraint firstItem="1DE-yY-3dl" firstAttribute="trailing" secondItem="rcP-KM-Qnw" secondAttribute="trailing" id="Oup-pm-d6N"/>
+                            <constraint firstItem="OpU-mf-ePk" firstAttribute="leading" secondItem="k8s-dP-oFp" secondAttribute="leading" id="UC2-mx-HQP"/>
                             <constraint firstItem="1DE-yY-3dl" firstAttribute="leading" secondItem="rcP-KM-Qnw" secondAttribute="leading" id="cth-tj-i3A"/>
                             <constraint firstItem="d3M-FN-b9H" firstAttribute="width" secondItem="rcP-KM-Qnw" secondAttribute="width" id="dNf-6q-wfQ"/>
+                            <constraint firstItem="OpU-mf-ePk" firstAttribute="top" secondItem="k8s-dP-oFp" secondAttribute="top" id="h79-nr-T66"/>
                             <constraint firstItem="rcP-KM-Qnw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="i1k-tV-XgU"/>
                             <constraint firstItem="k8s-dP-oFp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nMe-Mq-CYd"/>
                             <constraint firstItem="rcP-KM-Qnw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="pph-yi-GF6"/>
