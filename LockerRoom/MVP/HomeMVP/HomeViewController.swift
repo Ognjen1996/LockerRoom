@@ -45,6 +45,7 @@ extension HomeViewController {
    @IBAction private func showLeagues() {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "LeaguesTableViewController") as! LeaguesTableViewController
+        vc.player = self.player
         show(vc, sender: self)
     }
     

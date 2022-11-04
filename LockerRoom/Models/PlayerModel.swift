@@ -24,11 +24,11 @@ struct Data: Codable {
     var weight: String
     var age: Int
     var player_image: String
-//    var leagues: [Leagues] = []
+    var leagues: [Leagues] = []
     var user_info: Info
     var position: Position
-//    var total: Total
-//    var average: Average
+    var total: Total
+    var average: Average
     
 }
 struct Leagues: Codable {
@@ -60,7 +60,7 @@ struct Stats: Codable {
     var FGpercent: String
     var ThreePM: String
     var ThreePA: String
-    var TreePercent: String
+    var ThreePercent: String
     var FTM: String
     var FTA: String
     var FTPercent: String
@@ -73,7 +73,7 @@ struct Stats: Codable {
         case FGpercent = "FG%"
         case ThreePM = "3PM"
         case ThreePA = "3PA"
-        case TreePercent = "3P%"
+        case ThreePercent = "3P%"
         case FTPercent = "FT%"
         case id
         case player_id
@@ -121,7 +121,7 @@ struct Total: Codable {
     var FGpercent: String
     var ThreePM: String
     var ThreePA: String
-    var TreePercent: String
+    var ThreePercent: String
     var FTM: String
     var FTA: String
     var FTPercent: String
@@ -134,7 +134,7 @@ struct Total: Codable {
         case FGpercent = "FG%"
         case ThreePM = "3PM"
         case ThreePA = "3PA"
-        case TreePercent = "3P%"
+        case ThreePercent = "3P%"
         case FTPercent = "FT%"
         case id
         case player_id
@@ -161,6 +161,8 @@ struct Total: Codable {
 struct Average: Codable {
     var id: Int
     var player_id: Int
+    var GP: String
+    var GS: String
     var PTS: String
     var REB: String
     var AST: String
@@ -173,17 +175,44 @@ struct Average: Codable {
     var OREB: String
     var FGM: String
     var FGA: String
-    var FG: String
-    var PM: String
-    var PA: String
-    var P: String
+    var FGpercent: String
+    var ThreePM: String
+    var ThreePA: String
+    var ThreePercent: String
     var FTM: String
     var FTA: String
-    var FT: String
+    var FTPercent: String
     var created_at: String
     var updated_at: String
-    var GP: String
-    var GS: String
+    
+    enum CodingKeys: String, CodingKey {
+        case FGpercent = "FG%"
+        case ThreePM = "3PM"
+        case ThreePA = "3PA"
+        case ThreePercent = "3P%"
+        case FTPercent = "FT%"
+        case id
+        case player_id
+        case PTS
+        case REB
+        case AST
+        case STL
+        case BLK
+        case TOV
+        case PF
+        case MIN
+        case DREB
+        case OREB
+        case FGM
+        case FGA
+        case FTM
+        case FTA
+        case created_at
+        case updated_at
+        case GP
+        case GS
+    }
+
 }
 struct Position: Codable {
     var id: Int

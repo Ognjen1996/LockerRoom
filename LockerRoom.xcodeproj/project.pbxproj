@@ -23,6 +23,7 @@
 		245EAC57291001E6009CDEC3 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EAC56291001E6009CDEC3 /* ChatViewController.swift */; };
 		245EAC59291001F4009CDEC3 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EAC58291001F4009CDEC3 /* CalendarViewController.swift */; };
 		24BB50812913D8C8006E68F2 /* LeaguesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BB50802913D8C8006E68F2 /* LeaguesTableViewController.swift */; };
+		24DE18BA2914F9F200A960C0 /* LeaguesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DE18B92914F9F200A960C0 /* LeaguesTableViewCell.swift */; };
 		24E67BCE290BEF8800DEBE16 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E67BCD290BEF8800DEBE16 /* LoginModel.swift */; };
 		24F0CC97290FC76F00E16B2F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24F0CC96290FC76F00E16B2F /* Home.storyboard */; };
 		24F0CC99290FC7B900E16B2F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0CC98290FC7B900E16B2F /* HomeViewController.swift */; };
@@ -48,6 +49,7 @@
 		245EAC56291001E6009CDEC3 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		245EAC58291001F4009CDEC3 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		24BB50802913D8C8006E68F2 /* LeaguesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesTableViewController.swift; sourceTree = "<group>"; };
+		24DE18B92914F9F200A960C0 /* LeaguesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesTableViewCell.swift; sourceTree = "<group>"; };
 		24E67BCD290BEF8800DEBE16 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		24F0CC96290FC76F00E16B2F /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		24F0CC98290FC7B900E16B2F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			children = (
 				243536DC290FDBC80014DF4B /* LoginMVP */,
 				243536DD290FDBCE0014DF4B /* HomeMVP */,
+				24DE18BB2914F9FB00A960C0 /* LeaguesMVP */,
 			);
 			path = MVP;
 			sourceTree = "<group>";
@@ -169,12 +172,20 @@
 				24F0CC98290FC7B900E16B2F /* HomeViewController.swift */,
 				240F0736291105E50057F0CD /* HomeView.swift */,
 				245EAC54291000E4009CDEC3 /* HomePresenter.swift */,
-				24BB50802913D8C8006E68F2 /* LeaguesTableViewController.swift */,
 				245EAC4D290FEA28009CDEC3 /* TabBarViewController.swift */,
 				245EAC56291001E6009CDEC3 /* ChatViewController.swift */,
 				245EAC58291001F4009CDEC3 /* CalendarViewController.swift */,
 			);
 			path = HomeMVP;
+			sourceTree = "<group>";
+		};
+		24DE18BB2914F9FB00A960C0 /* LeaguesMVP */ = {
+			isa = PBXGroup;
+			children = (
+				24BB50802913D8C8006E68F2 /* LeaguesTableViewController.swift */,
+				24DE18B92914F9F200A960C0 /* LeaguesTableViewCell.swift */,
+			);
+			path = LeaguesMVP;
 			sourceTree = "<group>";
 		};
 		472AA541EA83EFD976B24436 /* Frameworks */ = {
@@ -322,6 +333,7 @@
 				245EAC4E290FEA28009CDEC3 /* TabBarViewController.swift in Sources */,
 				243536DF290FDBFD0014DF4B /* LoginView.swift in Sources */,
 				24F0CC99290FC7B900E16B2F /* HomeViewController.swift in Sources */,
+				24DE18BA2914F9F200A960C0 /* LeaguesTableViewCell.swift in Sources */,
 				245EAC57291001E6009CDEC3 /* ChatViewController.swift in Sources */,
 				245EAC55291000E4009CDEC3 /* HomePresenter.swift in Sources */,
 				24BB50812913D8C8006E68F2 /* LeaguesTableViewController.swift in Sources */,
