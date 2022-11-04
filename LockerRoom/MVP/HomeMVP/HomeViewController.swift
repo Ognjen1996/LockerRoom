@@ -10,6 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
     
     var player: PlayerModel?
+    var league: Int?
     
     // MARK: - UIView Properties
     var homeView: HomeView {
@@ -25,12 +26,13 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         setupDelegates()
         presenter?.fetchData()
-        setup()
+        
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         presenter?.fetchData()
+        setup()
     }
-    
     
 }
 
@@ -42,22 +44,15 @@ extension HomeViewController {
         homeView.setup(with: player)
     }
     
-   @IBAction private func showLeagues() {
-        let storyboard = UIStoryboard(name: "Home", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "LeaguesTableViewController") as! LeaguesTableViewController
-        vc.player = self.player
-        show(vc, sender: self)
-    }
-    
     private func setupDelegates() {
         presenter?.delegate = self
+
     }
 }
+
 extension HomeViewController: HomePresenenterDelegate {
     func homePresenter(_ presenter: HomePresenter, data: PlayerModel) {
         self.player = data
         setup()
     }
-    
-    
 }

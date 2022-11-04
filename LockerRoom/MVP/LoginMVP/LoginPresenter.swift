@@ -34,7 +34,6 @@ class LoginPresenter {
                     let user = try JSONDecoder().decode(Login.self, from: response.data ?? Foundation.Data())
                     // send data using protcol to vc
                     self.delegate?.loginPresenter(self, didLoginWithUser: user)
-
                     
                 } catch {
                     debugPrint(error)

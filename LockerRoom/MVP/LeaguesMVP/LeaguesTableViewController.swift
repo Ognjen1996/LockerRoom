@@ -7,17 +7,19 @@
 
 import UIKit
 
+protocol LeaguesTableViewControllerDelegate: AnyObject {
+    func selectedLeague(_ controller: LeaguesTableViewController, league: Int)
+}
+
 class LeaguesTableViewController: UIViewController {
     
-    
+    var delegate: LeaguesTableViewControllerDelegate?
     @IBOutlet weak var tableView: UITableView!
     var player: PlayerModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-//        self.tableView.register(LeaguesTableViewCell.self, forCellReuseIdentifier: "LeaguesTableViewCell")
         tableView.delegate = self
         tableView.dataSource = self
         // Do any additional setup after loading the view.
@@ -26,6 +28,8 @@ class LeaguesTableViewController: UIViewController {
 
 extension LeaguesTableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.delegate?.selectedLeague(self, league: indexPath.row)
         self.navigationController?.popViewController(animated: true)
     }
 }

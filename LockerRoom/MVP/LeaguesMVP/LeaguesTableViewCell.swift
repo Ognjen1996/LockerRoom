@@ -10,7 +10,6 @@ import UIKit
 class LeaguesTableViewCell: UITableViewCell {
 
     @IBOutlet var leagueLabel: UILabel!
-    var n = 0
 
 
 
@@ -29,9 +28,7 @@ class LeaguesTableViewCell: UITableViewCell {
         leagueLabel.text = player.league_name
         
     }
-    private func leaguesCounter() {
-        
-    }
+
 
 }
 
