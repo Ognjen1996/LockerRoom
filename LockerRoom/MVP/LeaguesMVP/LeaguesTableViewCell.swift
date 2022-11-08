@@ -10,6 +10,8 @@ import UIKit
 class LeaguesTableViewCell: UITableViewCell {
 
     @IBOutlet var leagueLabel: UILabel!
+    @IBOutlet weak var nameChatLabel: UILabel!
+    @IBOutlet weak var lastMessageLabel: UILabel!
 
 
 

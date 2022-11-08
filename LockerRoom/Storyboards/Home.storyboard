@@ -2,9 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -60,6 +60,16 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleAspectFit" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrp-7c-gHe">
+                                        <rect key="frame" x="338" y="8" width="50" height="50"/>
+                                        <menu key="menu" id="AGI-Bc-tjC">
+                                            <children>
+                                                <command title="Item 1" id="bFd-5U-O5J"/>
+                                                <command title="Item 2" id="uUg-Wb-f5I"/>
+                                            </children>
+                                        </menu>
+                                        <state key="normal" image="icons"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.40105028973509932" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -77,9 +87,12 @@
                                     <constraint firstAttribute="bottom" secondItem="ju7-wr-eR6" secondAttribute="bottom" constant="20" id="XAm-vH-nxl"/>
                                     <constraint firstItem="ju7-wr-eR6" firstAttribute="leading" secondItem="2wo-Zb-Jo1" secondAttribute="leading" id="Xpx-37-0lp"/>
                                     <constraint firstItem="xX5-9e-jbR" firstAttribute="top" secondItem="Ic1-1d-vet" secondAttribute="bottom" constant="16" id="ddW-DB-RiP"/>
+                                    <constraint firstAttribute="trailing" secondItem="hrp-7c-gHe" secondAttribute="trailing" constant="2" id="iiD-PX-pOE"/>
                                     <constraint firstItem="2wo-Zb-Jo1" firstAttribute="top" secondItem="cHZ-i5-bE7" secondAttribute="bottom" constant="16" id="l8H-la-iRi"/>
+                                    <constraint firstItem="hrp-7c-gHe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="IfE-Zg-V7h" secondAttribute="trailing" id="lmQ-wB-nSZ"/>
                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xX5-9e-jbR" secondAttribute="bottom" id="ouv-Yi-yDE"/>
                                     <constraint firstItem="Ic1-1d-vet" firstAttribute="leading" secondItem="GSX-6V-gYm" secondAttribute="leading" constant="16" id="pD9-mg-VFz"/>
+                                    <constraint firstItem="hrp-7c-gHe" firstAttribute="top" secondItem="GSX-6V-gYm" secondAttribute="top" constant="8" id="r7O-oU-iwN"/>
                                     <constraint firstAttribute="trailing" secondItem="2wo-Zb-Jo1" secondAttribute="trailing" constant="16" id="rIU-97-RRO"/>
                                     <constraint firstItem="Ic1-1d-vet" firstAttribute="top" secondItem="cHZ-i5-bE7" secondAttribute="bottom" constant="16" id="uZx-kk-dhD"/>
                                 </constraints>
@@ -244,6 +257,7 @@
                             <outlet property="fpgLabel" destination="JoF-YA-Qqb" id="9ch-Jd-hh2"/>
                             <outlet property="heightLabel" destination="Ic1-1d-vet" id="BFz-xa-KV6"/>
                             <outlet property="locationLabel" destination="xX5-9e-jbR" id="lFb-dU-hir"/>
+                            <outlet property="logoutButton" destination="hrp-7c-gHe" id="lld-fv-ksu"/>
                             <outlet property="nameLabel" destination="cHZ-i5-bE7" id="k6b-1K-vgF"/>
                             <outlet property="playerPicture" destination="IfE-Zg-V7h" id="vot-vB-KSa"/>
                             <outlet property="popUpButtonStates" destination="cmc-kg-xbf" id="fCc-uh-PQo"/>
@@ -260,71 +274,9 @@
             </objects>
             <point key="canvasLocation" x="44.615384615384613" y="3.5545023696682461"/>
         </scene>
-        <!--Leagues Table View Controller-->
-        <scene sceneID="PuE-Co-y3R">
-            <objects>
-                <viewController storyboardIdentifier="LeaguesTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gee-Kh-DFZ" customClass="LeaguesTableViewController" customModule="LockerRoom" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Xts-yD-pat">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1Gx-8L-Onn">
-                                <rect key="frame" x="0.0" y="47" width="390" height="463"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeaguesTableViewCell" id="2UI-r3-dAe" customClass="LeaguesTableViewCell" customModule="LockerRoom" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="390" height="37.333332061767578"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2UI-r3-dAe" id="qqy-wS-LV0">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="37.333332061767578"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzB-y6-xU4">
-                                                    <rect key="frame" x="16" y="7.9999999999999982" width="42" height="21.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="AzB-y6-xU4" firstAttribute="leading" secondItem="qqy-wS-LV0" secondAttribute="leading" constant="16" id="1kB-n1-D8C"/>
-                                                <constraint firstItem="AzB-y6-xU4" firstAttribute="top" secondItem="qqy-wS-LV0" secondAttribute="top" constant="8" id="HK7-OD-IJF"/>
-                                                <constraint firstAttribute="bottom" secondItem="AzB-y6-xU4" secondAttribute="bottom" constant="8" id="SQS-ym-ZjS"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="AzB-y6-xU4" secondAttribute="trailing" id="n4Z-Ci-dUc"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="leagueLabel" destination="AzB-y6-xU4" id="7To-0P-65K"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="ZXM-uX-0cj"/>
-                        <color key="backgroundColor" systemColor="labelColor"/>
-                        <constraints>
-                            <constraint firstItem="ZXM-uX-0cj" firstAttribute="bottom" secondItem="1Gx-8L-Onn" secondAttribute="bottom" constant="300" id="TfT-Fk-fiA"/>
-                            <constraint firstItem="1Gx-8L-Onn" firstAttribute="top" secondItem="ZXM-uX-0cj" secondAttribute="top" id="ldL-WR-uGf"/>
-                            <constraint firstItem="ZXM-uX-0cj" firstAttribute="trailing" secondItem="1Gx-8L-Onn" secondAttribute="trailing" id="vOV-QH-NUO"/>
-                            <constraint firstItem="1Gx-8L-Onn" firstAttribute="leading" secondItem="ZXM-uX-0cj" secondAttribute="leading" id="yTn-7p-g4s"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="tableView" destination="1Gx-8L-Onn" id="I5z-Rm-65g"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W5B-5Y-sWL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="817" y="4"/>
-        </scene>
     </scenes>
     <resources>
         <image name="czvhome" width="900" height="506"/>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="icons" width="50" height="50"/>
     </resources>
 </document>

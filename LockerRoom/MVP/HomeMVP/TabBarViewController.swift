@@ -7,7 +7,7 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        UITabBar.appearance().barTintColor = .white
+        UITabBar.appearance().barTintColor = .black
         tabBar.tintColor = .white
         configureTabBar()
         // Do any additional setup after loading the view.
@@ -25,6 +25,7 @@ class TabBarController: UITabBarController {
         
         let storyBoard1 = UIStoryboard.init(name: "Calendar", bundle: nil)
         guard let vcShare = storyBoard1.instantiateViewController(withIdentifier: "CalendarViewController" ) as? CalendarViewController else {return}
+        vcShare.presenter = CalendarPresenter()
         vcShare.tabBarItem = UITabBarItem(title: "Calendar", image: UIImage(named: "calendaricon"), selectedImage: UIImage(named: "shareicon"))
         
         let viewControllerList = [vcWeekly, vc,  vcShare]

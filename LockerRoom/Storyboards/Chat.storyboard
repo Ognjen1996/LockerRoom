@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -15,9 +16,68 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KAH-Hf-2XV">
+                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeaguesTableViewCell" id="DT2-cM-QIt" customClass="LeaguesTableViewCell" customModule="LockerRoom" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="96.333335876464844"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DT2-cM-QIt" id="GRf-BZ-pLR">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="96.333335876464844"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7f-sa-XGG">
+                                                    <rect key="frame" x="16" y="20" width="358" height="19.333333333333329"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Label">
+                                                            <attributes>
+                                                                <font key="NSFont" size="17" name="Arial-BoldMT"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PI-Yz-lJj">
+                                                    <rect key="frame" x="16" y="59.333333333333343" width="358" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6PI-Yz-lJj" firstAttribute="leading" secondItem="GRf-BZ-pLR" secondAttribute="leading" constant="16" id="3a6-yZ-dlX"/>
+                                                <constraint firstAttribute="trailing" secondItem="W7f-sa-XGG" secondAttribute="trailing" constant="16" id="FVC-Gc-m6z"/>
+                                                <constraint firstAttribute="bottom" secondItem="6PI-Yz-lJj" secondAttribute="bottom" constant="16" id="dum-Gt-Nuy"/>
+                                                <constraint firstItem="W7f-sa-XGG" firstAttribute="top" secondItem="GRf-BZ-pLR" secondAttribute="top" constant="20" id="fNA-gL-rUZ"/>
+                                                <constraint firstItem="W7f-sa-XGG" firstAttribute="leading" secondItem="GRf-BZ-pLR" secondAttribute="leading" constant="16" id="iPn-90-uKO"/>
+                                                <constraint firstItem="6PI-Yz-lJj" firstAttribute="top" secondItem="W7f-sa-XGG" secondAttribute="bottom" constant="20" id="p6G-H0-Fl8"/>
+                                                <constraint firstAttribute="trailing" secondItem="6PI-Yz-lJj" secondAttribute="trailing" constant="16" id="yZs-wv-qcy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lastMessageLabel" destination="6PI-Yz-lJj" id="cBm-We-XbN"/>
+                                            <outlet property="nameChatLabel" destination="W7f-sa-XGG" id="9ud-Uv-9NY"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="KAH-Hf-2XV" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="7Eh-dr-MLG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KAH-Hf-2XV" secondAttribute="trailing" id="I3L-d0-VHW"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="KAH-Hf-2XV" secondAttribute="bottom" id="a5M-ub-ptU"/>
+                            <constraint firstItem="KAH-Hf-2XV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vJo-yw-l37"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableVIew" destination="KAH-Hf-2XV" id="akj-gO-msP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -27,6 +87,9 @@
     <resources>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

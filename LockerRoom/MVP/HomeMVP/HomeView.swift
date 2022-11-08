@@ -27,6 +27,8 @@ class HomeView: UIView {
     @IBOutlet weak var spgLabel: UILabel!
     
     @IBOutlet weak var popUpButtonStates: UIButton!
+    @IBOutlet weak var logoutButton: UIButton!
+    
 
 
     
@@ -40,7 +42,6 @@ class HomeView: UIView {
                 self.setupStatsData(league: player.data.leagues[index])
             }
         }
-        
         var optionsArray = [UIAction]()
         for league in player.data.leagues{
             let action = UIAction(title: league.league_name, state: .off, handler: optionClosure)
@@ -48,10 +49,22 @@ class HomeView: UIView {
         }
         let optionsMenu = UIMenu(title: "", options: .displayInline, children: optionsArray)
         popUpButtonStates.menu = optionsMenu
-        popUpButtonStates.changesSelectionAsPrimaryAction = true
+        if #available(iOS 15.0, *) {
+            popUpButtonStates.changesSelectionAsPrimaryAction = true
+        } else {
+            // Fallback on earlier versions
+        }
         popUpButtonStates.showsMenuAsPrimaryAction = true
-        (popUpButtonStates.menu?.children[0] as? UIAction)?.state = .on
+        optionsArray[0].state = .on
         setupStatsData(league: player.data.leagues[0])
+        
+        let menuClosure = { (action: UIAction) in
+            self.popToLogin()
+        }
+        
+        logoutButton.menu = UIMenu(children: [UIAction(title: "Logout", state: .off, handler: menuClosure)])
+
+        
         let labels = [nameLabel, heightLabel, positionLabel, locationLabel, ageLabel]
         for label in labels {
             if let label = label {
@@ -82,5 +95,12 @@ class HomeView: UIView {
         self.fpgLabel.text = "FPB \n" + league.stats.FGpercent
         self.tppLabel.text = "TPP \n" + league.stats.ThreePercent
         self.spgLabel.text = "SPG \n" + league.stats.STL
+    }
+    private func popToLogin() {
+        let stoyboard = UIStoryboard(name: "Auth", bundle: nil)
+        let vc = stoyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        vc.presenter = LoginPresenter()
+        UIApplication.shared.windows.first?.rootViewController = vc
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
 }

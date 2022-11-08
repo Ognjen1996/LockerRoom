@@ -22,6 +22,10 @@
 		245EAC55291000E4009CDEC3 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EAC54291000E4009CDEC3 /* HomePresenter.swift */; };
 		245EAC57291001E6009CDEC3 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EAC56291001E6009CDEC3 /* ChatViewController.swift */; };
 		245EAC59291001F4009CDEC3 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EAC58291001F4009CDEC3 /* CalendarViewController.swift */; };
+		24BB276B2919340C00D6C4CE /* WeightsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BB276A2919340C00D6C4CE /* WeightsModel.swift */; };
+		24BB276F291936E900D6C4CE /* CalendarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BB276E291936E900D6C4CE /* CalendarPresenter.swift */; };
+		24BB2771291936FD00D6C4CE /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BB2770291936FD00D6C4CE /* CalendarView.swift */; };
+		24BB2773291945A500D6C4CE /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BB2772291945A500D6C4CE /* CalendarTableViewCell.swift */; };
 		24BB50812913D8C8006E68F2 /* LeaguesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BB50802913D8C8006E68F2 /* LeaguesTableViewController.swift */; };
 		24DE18BA2914F9F200A960C0 /* LeaguesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DE18B92914F9F200A960C0 /* LeaguesTableViewCell.swift */; };
 		24E67BCE290BEF8800DEBE16 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E67BCD290BEF8800DEBE16 /* LoginModel.swift */; };
@@ -48,6 +52,10 @@
 		245EAC54291000E4009CDEC3 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		245EAC56291001E6009CDEC3 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		245EAC58291001F4009CDEC3 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		24BB276A2919340C00D6C4CE /* WeightsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightsModel.swift; sourceTree = "<group>"; };
+		24BB276E291936E900D6C4CE /* CalendarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPresenter.swift; sourceTree = "<group>"; };
+		24BB2770291936FD00D6C4CE /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		24BB2772291945A500D6C4CE /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		24BB50802913D8C8006E68F2 /* LeaguesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesTableViewController.swift; sourceTree = "<group>"; };
 		24DE18B92914F9F200A960C0 /* LeaguesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesTableViewCell.swift; sourceTree = "<group>"; };
 		24E67BCD290BEF8800DEBE16 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
@@ -118,6 +126,7 @@
 			children = (
 				243536DC290FDBC80014DF4B /* LoginMVP */,
 				243536DD290FDBCE0014DF4B /* HomeMVP */,
+				24BB276D291936BD00D6C4CE /* CalendarMVP */,
 				24DE18BB2914F9FB00A960C0 /* LeaguesMVP */,
 			);
 			path = MVP;
@@ -136,6 +145,7 @@
 			children = (
 				24E67BCD290BEF8800DEBE16 /* LoginModel.swift */,
 				240F0738291108BE0057F0CD /* PlayerModel.swift */,
+				24BB276A2919340C00D6C4CE /* WeightsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -174,9 +184,19 @@
 				245EAC54291000E4009CDEC3 /* HomePresenter.swift */,
 				245EAC4D290FEA28009CDEC3 /* TabBarViewController.swift */,
 				245EAC56291001E6009CDEC3 /* ChatViewController.swift */,
-				245EAC58291001F4009CDEC3 /* CalendarViewController.swift */,
 			);
 			path = HomeMVP;
+			sourceTree = "<group>";
+		};
+		24BB276D291936BD00D6C4CE /* CalendarMVP */ = {
+			isa = PBXGroup;
+			children = (
+				245EAC58291001F4009CDEC3 /* CalendarViewController.swift */,
+				24BB2770291936FD00D6C4CE /* CalendarView.swift */,
+				24BB276E291936E900D6C4CE /* CalendarPresenter.swift */,
+				24BB2772291945A500D6C4CE /* CalendarTableViewCell.swift */,
+			);
+			path = CalendarMVP;
 			sourceTree = "<group>";
 		};
 		24DE18BB2914F9FB00A960C0 /* LeaguesMVP */ = {
@@ -326,7 +346,9 @@
 				245EAC59291001F4009CDEC3 /* CalendarViewController.swift in Sources */,
 				243536E1290FDC0A0014DF4B /* LoginPresenter.swift in Sources */,
 				24280556290BE30900A10601 /* LoginViewController.swift in Sources */,
+				24BB2771291936FD00D6C4CE /* CalendarView.swift in Sources */,
 				24E67BCE290BEF8800DEBE16 /* LoginModel.swift in Sources */,
+				24BB276F291936E900D6C4CE /* CalendarPresenter.swift in Sources */,
 				24280552290BE30900A10601 /* AppDelegate.swift in Sources */,
 				240F0737291105E50057F0CD /* HomeView.swift in Sources */,
 				240F0739291108BE0057F0CD /* PlayerModel.swift in Sources */,
@@ -337,6 +359,8 @@
 				245EAC57291001E6009CDEC3 /* ChatViewController.swift in Sources */,
 				245EAC55291000E4009CDEC3 /* HomePresenter.swift in Sources */,
 				24BB50812913D8C8006E68F2 /* LeaguesTableViewController.swift in Sources */,
+				24BB276B2919340C00D6C4CE /* WeightsModel.swift in Sources */,
+				24BB2773291945A500D6C4CE /* CalendarTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +516,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -521,6 +546,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
