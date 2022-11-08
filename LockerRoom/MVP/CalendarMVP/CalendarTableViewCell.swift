@@ -9,7 +9,8 @@ import UIKit
 
 class CalendarTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var datelabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +25,10 @@ class CalendarTableViewCell: UITableViewCell {
 
     
     func setup(with training: [WeightData], n: Int){
-        label.text = training[n].name
+        nameLabel.text = training[n].name
+        let date = training[n].date
+        let dayHour = date.split(separator: " ")
+        
+        datelabel.text = dayHour[0] + "\n" + dayHour[1]
     }
 }
