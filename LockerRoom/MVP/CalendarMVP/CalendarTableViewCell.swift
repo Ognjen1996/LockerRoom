@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CalendarTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var datelabel: UILabel!
+    @IBOutlet weak var homeTeamImageView: UIImageView!
+    @IBOutlet weak var awayTeamImageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -51,6 +54,10 @@ class CalendarTableViewCell: UITableViewCell {
         let date = game[n].date
         let dayHour = date.split(separator: " ")
         datelabel.text = dayHour[0] + "\n" + dayHour[1]
+        let homeTeamImg = URL(string: game[n].team_home.team_logo)
+        homeTeamImageView.kf.setImage(with: homeTeamImg)
+        let awayTeamImg = URL(string: game[n].team_away.team_logo)
+        awayTeamImageView.kf.setImage(with: awayTeamImg)
     }
 
 }

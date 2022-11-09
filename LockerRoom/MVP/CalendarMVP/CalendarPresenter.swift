@@ -49,7 +49,6 @@ class CalendarPresenter {
                     let userData = try decoder.decode(MedicalModel.self, from: data)
                     let dataArray = userData.data.main_types.medical
                     self.delegate?.calendarPresenterForMedical(self, medicalData: dataArray)
-
                 }
                 if type == "2" {
                     let userData = try decoder.decode(PracticeModel.self, from: data)

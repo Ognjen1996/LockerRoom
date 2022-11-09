@@ -21,9 +21,12 @@
                                 <rect key="frame" x="0.0" y="47" width="390" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NqS-vA-c4z">
-                                        <rect key="frame" x="50" y="20" width="46" height="30"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="95" y="20" width="200" height="30"/>
+                                        <color key="backgroundColor" red="0.54433001893939392" green="0.54433001893939392" blue="0.54433001893939392" alpha="0.41990894039735099" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="BjE-DQ-Qdx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <menu key="menu" id="1AC-ZO-ZnA">
                                             <children>
                                                 <command title="Item 1" id="SJM-g9-dwu"/>
@@ -36,7 +39,7 @@
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
+                                                <integer key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
@@ -44,10 +47,9 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="IXl-vT-dtu"/>
-                                    <constraint firstItem="NqS-vA-c4z" firstAttribute="leading" secondItem="Jdb-q6-mWJ" secondAttribute="leading" constant="50" id="MsT-cZ-vPo"/>
                                     <constraint firstItem="NqS-vA-c4z" firstAttribute="top" secondItem="Jdb-q6-mWJ" secondAttribute="top" constant="20" symbolic="YES" id="ih0-8o-NJC"/>
                                     <constraint firstAttribute="bottom" secondItem="NqS-vA-c4z" secondAttribute="bottom" constant="20" symbolic="YES" id="rdH-Ju-zqx"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NqS-vA-c4z" secondAttribute="trailing" id="zxc-Wb-KF1"/>
+                                    <constraint firstItem="NqS-vA-c4z" firstAttribute="centerX" secondItem="Jdb-q6-mWJ" secondAttribute="centerX" id="y00-nZ-aYA"/>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PN0-3l-ItN">
@@ -93,6 +95,7 @@
                                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="sectionIndexColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CalendarTableViewCell" rowHeight="150" id="l2H-aX-ZeI" customClass="CalendarTableViewCell" customModule="LockerRoom" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="50" width="358" height="150"/>
@@ -102,9 +105,9 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neki trening" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3C-a2-7yM">
-                                                                    <rect key="frame" x="16" y="16" width="342" height="20"/>
+                                                                    <rect key="frame" x="16" y="15.999999999999998" width="92" height="20.333333333333329"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -113,20 +116,33 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdq-tf-dVw">
-                                                                    <rect key="frame" x="16.000000000000004" y="76" width="41.333333333333343" height="20.333333333333329"/>
+                                                                    <rect key="frame" x="16.000000000000004" y="66.333333333333329" width="41.333333333333343" height="20.333333333333329"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ggi-cf-ioz">
+                                                                    <rect key="frame" x="236" y="62" width="115" height="66"/>
+                                                                </imageView>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GVV-yR-7WR">
+                                                                    <rect key="frame" x="105" y="62" width="115" height="66"/>
+                                                                </imageView>
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstItem="vdq-tf-dVw" firstAttribute="leading" secondItem="EeI-by-5SE" secondAttribute="leading" constant="16" id="7Kt-WD-kLe"/>
-                                                                <constraint firstItem="Z3C-a2-7yM" firstAttribute="top" secondItem="EeI-by-5SE" secondAttribute="top" constant="16" id="HSQ-Yv-3GQ"/>
-                                                                <constraint firstItem="vdq-tf-dVw" firstAttribute="top" secondItem="Z3C-a2-7yM" secondAttribute="bottom" constant="40" id="Knk-ee-pVm"/>
-                                                                <constraint firstItem="Z3C-a2-7yM" firstAttribute="leading" secondItem="EeI-by-5SE" secondAttribute="leading" constant="16" id="S4O-IV-TrR"/>
-                                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vdq-tf-dVw" secondAttribute="trailing" id="b68-yU-guJ"/>
-                                                                <constraint firstAttribute="trailing" secondItem="Z3C-a2-7yM" secondAttribute="trailing" id="ecj-kt-nKn"/>
+                                                                <constraint firstItem="GVV-yR-7WR" firstAttribute="width" secondItem="Ggi-cf-ioz" secondAttribute="width" id="5vN-8e-D46"/>
+                                                                <constraint firstItem="Z3C-a2-7yM" firstAttribute="leading" secondItem="EeI-by-5SE" secondAttribute="leading" constant="16" id="6vI-dS-LBu"/>
+                                                                <constraint firstItem="GVV-yR-7WR" firstAttribute="height" secondItem="Ggi-cf-ioz" secondAttribute="height" id="7oq-k7-N6K"/>
+                                                                <constraint firstItem="vdq-tf-dVw" firstAttribute="leading" secondItem="EeI-by-5SE" secondAttribute="leading" constant="16.000000000000004" id="9dj-bc-a9I"/>
+                                                                <constraint firstAttribute="bottom" secondItem="Ggi-cf-ioz" secondAttribute="bottom" constant="22" id="AV4-Np-UrF"/>
+                                                                <constraint firstItem="GVV-yR-7WR" firstAttribute="leading" secondItem="vdq-tf-dVw" secondAttribute="trailing" constant="47.666666666666657" id="B8a-jt-MNO"/>
+                                                                <constraint firstItem="GVV-yR-7WR" firstAttribute="top" secondItem="EeI-by-5SE" secondAttribute="topMargin" constant="51" id="DJk-BA-Fhc"/>
+                                                                <constraint firstItem="GVV-yR-7WR" firstAttribute="top" secondItem="Ggi-cf-ioz" secondAttribute="top" id="JbD-F8-xLE"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Ggi-cf-ioz" secondAttribute="trailing" constant="7" id="Rak-kI-Eyr"/>
+                                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Z3C-a2-7yM" secondAttribute="trailing" id="gmN-sW-smY"/>
+                                                                <constraint firstItem="vdq-tf-dVw" firstAttribute="top" secondItem="Z3C-a2-7yM" secondAttribute="bottom" constant="30" id="h0Y-xR-EWt"/>
+                                                                <constraint firstItem="Ggi-cf-ioz" firstAttribute="leading" secondItem="GVV-yR-7WR" secondAttribute="trailing" constant="16" id="pYA-DN-w3x"/>
+                                                                <constraint firstItem="Z3C-a2-7yM" firstAttribute="top" secondItem="EeI-by-5SE" secondAttribute="top" constant="16" id="uh4-yy-RgH"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -134,9 +150,16 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </tableViewCellContentView>
-                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.55285078642384111" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.35955608443708609" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
+                                                            <outlet property="awayTeamImageView" destination="Ggi-cf-ioz" id="gVn-lq-Zvd"/>
                                                             <outlet property="datelabel" destination="vdq-tf-dVw" id="XEz-ql-yoL"/>
+                                                            <outlet property="homeTeamImageView" destination="GVV-yR-7WR" id="eLB-so-PwW"/>
                                                             <outlet property="nameLabel" destination="Z3C-a2-7yM" id="zEg-Nd-DQu"/>
                                                         </connections>
                                                     </tableViewCell>
@@ -186,7 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="58" y="-2"/>
+            <point key="canvasLocation" x="56.92307692307692" y="-2.1327014218009479"/>
         </scene>
     </scenes>
 </document>
