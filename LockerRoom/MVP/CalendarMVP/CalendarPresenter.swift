@@ -10,20 +10,25 @@ import Alamofire
 import SwiftyJSON
 
 protocol CalendarPresenterDelegate: AnyObject {
-    func calendarPResenter(_ presenter: CalendarPresenter, data: [WeightData])
+    func calendarPresenterForWeights(_ presenter: CalendarPresenter, weightData: [WeightData])
+    func calendarPresenterForGames(_ presenter: CalendarPresenter, gameData: [GameData])
+    func calendarPresenterForMedical(_ presenter: CalendarPresenter, medicalData: [MedicalData])
+    func calendarPresenterForPractice(_ presenter: CalendarPresenter, practiceData: [PracticeData])
 }
 
-class CalendarPresenter: UIViewController {
+class CalendarPresenter {
 
+    var user: Login
     weak var delegate: CalendarPresenterDelegate?
-    var bearer: String = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hcHAubG9ja2Vycm9vbXN5c3RlbS5jb21cL2FwaVwvYXV0aFwvbG9naW4iLCJpYXQiOjE2NjczNzg4NzUsImV4cCI6MTY2Nzk3ODg3NSwibmJmIjoxNjY3Mzc4ODc1LCJqdGkiOiI0d2RmUDQybXBxZ1RWeUdqIiwic3ViIjo0OSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSIsImlkIjo0OSwibmFtZSI6IkFkbWluIiwiZW1haWwiOiJvZmZpY2VAb2N0YXNvbHV0aW9ucy5iaXoiLCJpbWFnZSI6bnVsbH0.I9mUfjTL5e36YZVpG5A3S4M41CgqDbjh7vDOov-JiuI"
+    var bearer: String = "Bearer "
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    init(user: Login) {
+        self.user = user
+        self.bearer += user.access_token
     }
-    func fetchData() {
-        let baseURL = "https://app.lockerroomsystem.com/api/weights"
+    
+    func fetchData(for type: String) {
+        let baseURL = "https://app.lockerroomsystem.com/api/calendar/\(type)"
         guard let url = URL(string: baseURL) else {return}
         var request = URLRequest(url: url)
         request.method = .get
@@ -34,10 +39,28 @@ class CalendarPresenter: UIViewController {
                     let data = response.data else { return }
             do {
                 let decoder = JSONDecoder()
-                let userData = try decoder.decode(WeightModel.self, from: data)
-                let dataArray = userData.data
-//                    debugPrint(userData)
-                self.delegate?.calendarPResenter(self, data: dataArray)
+                
+                if type == "4" {
+                    let userData = try decoder.decode(WeightModel.self, from: data)
+                    let dataArray = userData.data.main_types.weight
+                    self.delegate?.calendarPresenterForWeights(self, weightData: dataArray)
+                }
+                if type == "3" {
+                    let userData = try decoder.decode(MedicalModel.self, from: data)
+                    let dataArray = userData.data.main_types.medical
+                    self.delegate?.calendarPresenterForMedical(self, medicalData: dataArray)
+
+                }
+                if type == "2" {
+                    let userData = try decoder.decode(PracticeModel.self, from: data)
+                    let dataArray = userData.data.main_types.practice
+                    self.delegate?.calendarPresenterForPractice(self, practiceData: dataArray)
+                }
+                if type == "1" {
+                    let userData = try decoder.decode(GameModel.self, from: data)
+                    let dataArray = userData.data.main_types.games
+                    self.delegate?.calendarPresenterForGames(self, gameData: dataArray)
+                }
             } catch let error {
                 debugPrint(error)
             }

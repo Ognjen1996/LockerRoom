@@ -15,9 +15,12 @@ struct PracticeModel: Codable{
     var data: MainTypes
 }
 struct MainTypes: Codable {
-    var practice: [Practice]
+    var main_types: Practice
 }
 struct Practice: Codable {
+    var practice: [PracticeData]
+}
+struct PracticeData: Codable {
     var id: Int
     var name: String
     var date: String

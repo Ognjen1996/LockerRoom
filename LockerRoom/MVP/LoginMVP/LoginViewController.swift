@@ -61,10 +61,8 @@ extension LoginViewController {
  
 extension LoginViewController: LoginPresenterDelegate {
     func loginPresenter(_ presenter: LoginPresenter, didLoginWithUser userData: Login) {
-        let storyboad = UIStoryboard(name: "Home", bundle: nil)
-        let viewController = storyboad.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-        let tabBar = TabBarController()
-        
+        let tabBar = TabBarController(user: userData)
+        tabBar.user = userData
         UIApplication.shared.windows.first?.rootViewController = tabBar
         UIApplication.shared.windows.first?.makeKeyAndVisible()
     }

@@ -15,9 +15,12 @@ struct GameModel: Codable {
     var data: MainTypesGame
 }
 struct MainTypesGame: Codable {
-    var games: [Game]
+    var main_types: Game
 }
 struct Game: Codable {
+    var games: [GameData]
+}
+struct GameData: Codable {
     var id: Int
     var team_id_home: Int
     var team_id_away: Int

@@ -3,7 +3,7 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
-
+    var user: Login
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -13,10 +13,21 @@ class TabBarController: UITabBarController {
         // Do any additional setup after loading the view.
     }
     
+    
+    init(user: Login) {
+        
+        self.user = user
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     private func configureTabBar() {
         let storyBoard = UIStoryboard.init(name: "Home", bundle: nil)
         guard let vc = storyBoard.instantiateViewController(withIdentifier: "HomeViewController" ) as? HomeViewController else {return}
-        vc.presenter = HomePresenter()
+        vc.presenter = HomePresenter(user: user)
         vc.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "homeicon"), selectedImage: UIImage(named: "homeicon"))
         
         let storyBoard2 = UIStoryboard.init(name: "Chat", bundle: nil)
@@ -25,7 +36,7 @@ class TabBarController: UITabBarController {
         
         let storyBoard1 = UIStoryboard.init(name: "Calendar", bundle: nil)
         guard let vcShare = storyBoard1.instantiateViewController(withIdentifier: "CalendarViewController" ) as? CalendarViewController else {return}
-        vcShare.presenter = CalendarPresenter()
+        vcShare.presenter = CalendarPresenter(user: user)
         vcShare.tabBarItem = UITabBarItem(title: "Calendar", image: UIImage(named: "calendaricon"), selectedImage: UIImage(named: "shareicon"))
         
         let viewControllerList = [vcWeekly, vc,  vcShare]
