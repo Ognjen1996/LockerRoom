@@ -32,13 +32,36 @@ extension DetailsViewController: UITableViewDelegate {
 }
 extension DetailsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let exercises = selectedWeight?.exericise else {return 0}
-        return exercises.count
-        
+        if flag == 4 {
+            guard let exercises = selectedWeight?.exericise else {return 0}
+            return exercises.count
+        }
+        else {
+            return 1
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: DetailsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "DetailsTableViewCell", for: indexPath) as! DetailsTableViewCell
+        if flag == 1 {
+            if let selectedGame = selectedGame {
+                cell.setupGames(with: selectedGame, n: indexPath.row)
+                return cell
+            }
+        }
+        if flag == 2 {
+            if let selectedPractice = selectedPractice {
+                cell.setupPractice(with: selectedPractice, n: indexPath.row)
+                return cell
+            }
+        }
+
+        if flag == 3 {
+            if let selectedMedical = selectedMedical {
+                cell.setupMedical(with: selectedMedical, n: indexPath.row)
+                return cell
+            }
+        }
         if flag == 4 {
             if let selectedWeight = selectedWeight {
                 cell.setupWeights(with: selectedWeight, n: indexPath.row)

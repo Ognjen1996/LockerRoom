@@ -144,6 +144,22 @@ extension CalendarViewController : UITableViewDelegate {
                 show(vc, sender: self)
             }
         }
+        if flag == 2 {
+            if let practices = self.practices {
+                let selected = practices[indexPath.row]
+                vc.flag = flag
+                vc.selectedPractice = selected
+                show(vc, sender: self)
+            }
+        }
+        if flag == 3 {
+            if let medicals = self.medicals {
+                let selected = medicals[indexPath.row]
+                vc.flag = flag
+                vc.selectedMedical = selected
+                show(vc, sender: self)
+            }
+        }
         if flag == 4 {
             if let weights = self.weights {
                 let selected = weights[indexPath.row]

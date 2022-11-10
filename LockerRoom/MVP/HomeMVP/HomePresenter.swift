@@ -25,7 +25,7 @@ class HomePresenter {
     }
     
     func fetchData() {
-        let baseURL = "https://app.lockerroomsystem.com/api/player/1"
+        let baseURL = "https://app.lockerroomsystem.com/api/player/3"
         guard let url = URL(string: baseURL) else {return}
         var request = URLRequest(url: url)
         request.method = .get
