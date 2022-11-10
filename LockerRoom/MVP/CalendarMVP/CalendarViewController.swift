@@ -15,7 +15,7 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var menuButton: UIButton!
     
     
-    var flag = 2
+    var flag = 1
     var dateOfGames: [String] = []
     var dateOfPractices: [String] = []
     var dateOfMedicals: [String] = []
@@ -27,11 +27,13 @@ class CalendarViewController: UIViewController {
     var weights: [WeightData]? = [] {
         didSet {
             tableView.reloadData()
+            events()
         }
     }
     var practices: [PracticeData]? = [] {
         didSet {
             tableView.reloadData()
+            events()
         }
     }
     var games: [GameData]? = [] {
@@ -43,6 +45,7 @@ class CalendarViewController: UIViewController {
     var medicals: [MedicalData]? = [] {
         didSet {
             tableView.reloadData()
+            events()
         }
     }
         
@@ -50,7 +53,7 @@ class CalendarViewController: UIViewController {
         super.viewDidLoad()
         setupButton()
         tableView.backgroundColor = .black
-        presenter?.fetchData(for: "2")
+        presenter?.fetchData(for: "1")
         presenter?.delegate = self
         tableView.dataSource = self
         tableView.delegate = self
@@ -115,8 +118,8 @@ class CalendarViewController: UIViewController {
         }
         menuButton.menu = UIMenu(children: [
             UIAction(title: "Weight", state: .off, handler: weightOptionClosure),
-            UIAction(title: "Practice", state: .on, handler: practiceOptionClosure),
-            UIAction(title: "Games", state: .off, handler: gamesOptionClosure),
+            UIAction(title: "Practice", state: .off, handler: practiceOptionClosure),
+            UIAction(title: "Games", state: .on, handler: gamesOptionClosure),
             UIAction(title: "Medical", state: .off, handler: medicalOptionClosure),
         ])
         
@@ -130,8 +133,29 @@ class CalendarViewController: UIViewController {
 }
 
 extension CalendarViewController : UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboad = UIStoryboard(name: "Calendar", bundle: nil)
+        let vc = storyboad.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+        if flag == 1 {
+            if let games = self.games {
+                let selected = games[indexPath.row]
+                vc.flag = flag
+                vc.selectedGame = selected
+                show(vc, sender: self)
+            }
+        }
+        if flag == 4 {
+            if let weights = self.weights {
+                let selected = weights[indexPath.row]
+                vc.flag = flag
+                vc.selectedWeight = selected
+                show(vc, sender: self)
+            }
+        }
+    }
 }
+
+
 
 extension CalendarViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -21,7 +21,7 @@ class LockerRoomViewController: UIViewController {
     }
 }
 extension LockerRoomViewController: UITableViewDelegate {
-    
+
 }
 extension LockerRoomViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,6 +34,4 @@ extension LockerRoomViewController: UITableViewDataSource {
         cell.setup(with: menuData, n: indexPath.row)
         return cell
     }
-    
-    
 }
