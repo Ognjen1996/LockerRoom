@@ -22,6 +22,8 @@
 		245EAC55291000E4009CDEC3 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EAC54291000E4009CDEC3 /* HomePresenter.swift */; };
 		245EAC57291001E6009CDEC3 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EAC56291001E6009CDEC3 /* ChatViewController.swift */; };
 		245EAC59291001F4009CDEC3 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EAC58291001F4009CDEC3 /* CalendarViewController.swift */; };
+		24A67D75291CE834007771CD /* LoockerRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A67D74291CE834007771CD /* LoockerRoomTableViewCell.swift */; };
+		24A67D77291CE850007771CD /* LockerRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A67D76291CE850007771CD /* LockerRoomViewController.swift */; };
 		24BB276B2919340C00D6C4CE /* WeightsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BB276A2919340C00D6C4CE /* WeightsModel.swift */; };
 		24BB276F291936E900D6C4CE /* CalendarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BB276E291936E900D6C4CE /* CalendarPresenter.swift */; };
 		24BB2771291936FD00D6C4CE /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BB2770291936FD00D6C4CE /* CalendarView.swift */; };
@@ -56,6 +58,8 @@
 		245EAC54291000E4009CDEC3 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		245EAC56291001E6009CDEC3 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		245EAC58291001F4009CDEC3 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		24A67D74291CE834007771CD /* LoockerRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoockerRoomTableViewCell.swift; sourceTree = "<group>"; };
+		24A67D76291CE850007771CD /* LockerRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockerRoomViewController.swift; sourceTree = "<group>"; };
 		24BB276A2919340C00D6C4CE /* WeightsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightsModel.swift; sourceTree = "<group>"; };
 		24BB276E291936E900D6C4CE /* CalendarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPresenter.swift; sourceTree = "<group>"; };
 		24BB2770291936FD00D6C4CE /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -196,6 +200,8 @@
 				245EAC54291000E4009CDEC3 /* HomePresenter.swift */,
 				245EAC4D290FEA28009CDEC3 /* TabBarViewController.swift */,
 				245EAC56291001E6009CDEC3 /* ChatViewController.swift */,
+				24A67D76291CE850007771CD /* LockerRoomViewController.swift */,
+				24A67D74291CE834007771CD /* LoockerRoomTableViewCell.swift */,
 			);
 			path = HomeMVP;
 			sourceTree = "<group>";
@@ -364,6 +370,7 @@
 				24BDF4F9291A869200C2170A /* MedicalModel.swift in Sources */,
 				24E67BCE290BEF8800DEBE16 /* LoginModel.swift in Sources */,
 				24BB276F291936E900D6C4CE /* CalendarPresenter.swift in Sources */,
+				24A67D75291CE834007771CD /* LoockerRoomTableViewCell.swift in Sources */,
 				24280552290BE30900A10601 /* AppDelegate.swift in Sources */,
 				240F0737291105E50057F0CD /* HomeView.swift in Sources */,
 				240F0739291108BE0057F0CD /* PlayerModel.swift in Sources */,
@@ -375,6 +382,7 @@
 				245EAC55291000E4009CDEC3 /* HomePresenter.swift in Sources */,
 				24BB50812913D8C8006E68F2 /* LeaguesTableViewController.swift in Sources */,
 				24BB276B2919340C00D6C4CE /* WeightsModel.swift in Sources */,
+				24A67D77291CE850007771CD /* LockerRoomViewController.swift in Sources */,
 				24BDF4FB291A989E00C2170A /* WeightRoomModel.swift in Sources */,
 				24BB2773291945A500D6C4CE /* CalendarTableViewCell.swift in Sources */,
 			);

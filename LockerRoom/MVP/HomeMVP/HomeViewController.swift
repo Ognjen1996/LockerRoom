@@ -11,6 +11,7 @@ class HomeViewController: UIViewController {
     
     var player: PlayerModel?
     var league: Int?
+
     
     // MARK: - UIView Properties
     var homeView: HomeView {
@@ -47,6 +48,11 @@ extension HomeViewController {
     private func setupDelegates() {
         presenter?.delegate = self
 
+    }
+    @IBAction private func showMenu() {
+        let storyboad = UIStoryboard(name: "Home", bundle: nil)
+        let vc = storyboad.instantiateViewController(withIdentifier: "LockerRoomViewController") as! LockerRoomViewController
+        show(vc, sender: self)
     }
 }
 

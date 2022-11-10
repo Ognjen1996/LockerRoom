@@ -33,6 +33,8 @@ class CalendarTableViewCell: UITableViewCell {
         let dayHour = date.split(separator: " ")
         
         datelabel.text = dayHour[0] + "\n" + dayHour[1]
+        homeTeamImageView.isHidden = true
+        awayTeamImageView.isHidden = true
     }
     func setupMedicals(with medicals: [MedicalData], n: Int){
         nameLabel.text = medicals[n].name + "\n" + medicals[n].comment
@@ -40,6 +42,8 @@ class CalendarTableViewCell: UITableViewCell {
         let date = medicals[n].date
         let dayHour = date.split(separator: " ")
         datelabel.text = dayHour[0] + "\n" + dayHour[1]
+        homeTeamImageView.isHidden = true
+        awayTeamImageView.isHidden = true
     }
     func setupPractice(with practice: [PracticeData], n: Int) {
         nameLabel.text = practice[n].name
@@ -47,6 +51,8 @@ class CalendarTableViewCell: UITableViewCell {
         let date = practice[n].date
         let dayHour = date.split(separator: " ")
         datelabel.text = dayHour[0] + "\n" + dayHour[1]
+        homeTeamImageView.isHidden = true
+        awayTeamImageView.isHidden = true
     }
     
     func setupGame(with game: [GameData], n: Int) {
@@ -54,6 +60,8 @@ class CalendarTableViewCell: UITableViewCell {
         let date = game[n].date
         let dayHour = date.split(separator: " ")
         datelabel.text = dayHour[0] + "\n" + dayHour[1]
+        homeTeamImageView.isHidden = false
+        awayTeamImageView.isHidden = false
         let homeTeamImg = URL(string: game[n].team_home.team_logo)
         homeTeamImageView.kf.setImage(with: homeTeamImg)
         let awayTeamImg = URL(string: game[n].team_away.team_logo)

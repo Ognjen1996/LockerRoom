@@ -13,8 +13,16 @@ class CalendarViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var menuButton: UIButton!
+    
+    
     var flag = 2
+    var dateOfGames: [String] = []
+    var dateOfPractices: [String] = []
+    var dateOfMedicals: [String] = []
+    var dateOfWeights: [String] = []
 
+    
+    
     var presenter: CalendarPresenter?
     var weights: [WeightData]? = [] {
         didSet {
@@ -29,6 +37,7 @@ class CalendarViewController: UIViewController {
     var games: [GameData]? = [] {
         didSet {
             tableView.reloadData()
+            events()
         }
     }
     var medicals: [MedicalData]? = [] {
@@ -47,6 +56,35 @@ class CalendarViewController: UIViewController {
         tableView.delegate = self
         
 
+    }
+    
+    fileprivate lazy var dateFormatter2: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter
+    }()
+    
+    private func events() {
+        guard let games = games else {return}
+        for game in games {
+            let dates = game.date.split(separator: " ")
+            dateOfGames.append(String(dates[0]))
+        }
+        guard let weights = weights else {return}
+        for weight in weights {
+            let dates = weight.date.split(separator: " ")
+            dateOfWeights.append(String(dates[0]))
+        }
+        guard let practices = practices else {return}
+        for practice in practices {
+            let dates = practice.date.split(separator: " ")
+            dateOfPractices.append(String(dates[0]))
+        }
+        guard let medicals = medicals else {return}
+        for medical in medicals {
+            let dates = medical.date.split(separator: " ")
+            dateOfMedicals.append(String(dates[0]))
+        }
     }
     
     private func setupButton() {
@@ -152,8 +190,32 @@ extension CalendarViewController: FSCalendarDelegate {
 
 }
 extension CalendarViewController: FSCalendarDataSource {
-    
+    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
+        let dateString = self.dateFormatter2.string(from: date)
+        switch flag {
+        case 1:
+            if self.dateOfGames.contains(dateString) {
+            return 1
+        }
+        case 2:
+            if self.dateOfPractices.contains(dateString) {
+            return 1
+        }
+        case 3:
+            if self.dateOfMedicals.contains(dateString) {
+            return 1
+        }
+        case 4:
+            if self.dateOfWeights.contains(dateString) {
+            return 1
+        }
+        default:
+            return 0
+        }
+        return 0
+    }
 }
+
 
 extension CalendarViewController: CalendarPresenterDelegate {
     func calendarPresenterForWeights(_ presenter: CalendarPresenter, weightData: [WeightData]) {
