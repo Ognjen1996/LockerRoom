@@ -21,7 +21,13 @@ class LockerRoomViewController: UIViewController {
     }
 }
 extension LockerRoomViewController: UITableViewDelegate {
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 4 {
+            let vc = storyboard?.instantiateViewController(withIdentifier: "PlaybookViewController") as! PlaybookViewController
+            vc.presenter = PlaybookPresenter()
+            show(vc, sender: self)
+        }
+    }
 }
 extension LockerRoomViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

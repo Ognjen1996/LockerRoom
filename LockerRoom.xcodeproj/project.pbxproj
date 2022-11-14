@@ -16,6 +16,11 @@
 		2428055E290BE30A00A10601 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2428055C290BE30A00A10601 /* LaunchScreen.storyboard */; };
 		243536DF290FDBFD0014DF4B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243536DE290FDBFD0014DF4B /* LoginView.swift */; };
 		243536E1290FDC0A0014DF4B /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243536E0290FDC0A0014DF4B /* LoginPresenter.swift */; };
+		245BCD56292223A80046EA83 /* GamePlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245BCD55292223A80046EA83 /* GamePlanModel.swift */; };
+		245BCD5829222C240046EA83 /* PlaybookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245BCD5729222C240046EA83 /* PlaybookViewController.swift */; };
+		245BCD5A29222E890046EA83 /* PlaybookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245BCD5929222E890046EA83 /* PlaybookTableViewCell.swift */; };
+		245BCD5C29222EE60046EA83 /* PlaybookPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245BCD5B29222EE60046EA83 /* PlaybookPresenter.swift */; };
+		245BCD6129224D140046EA83 /* PlaybookDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245BCD6029224D140046EA83 /* PlaybookDetailsViewController.swift */; };
 		245EAC4E290FEA28009CDEC3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EAC4D290FEA28009CDEC3 /* TabBarViewController.swift */; };
 		245EAC50290FEA75009CDEC3 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245EAC4F290FEA75009CDEC3 /* Calendar.storyboard */; };
 		245EAC53290FEA88009CDEC3 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245EAC52290FEA88009CDEC3 /* Chat.storyboard */; };
@@ -54,6 +59,11 @@
 		2428055F290BE30A00A10601 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		243536DE290FDBFD0014DF4B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		243536E0290FDC0A0014DF4B /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		245BCD55292223A80046EA83 /* GamePlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlanModel.swift; sourceTree = "<group>"; };
+		245BCD5729222C240046EA83 /* PlaybookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybookViewController.swift; sourceTree = "<group>"; };
+		245BCD5929222E890046EA83 /* PlaybookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybookTableViewCell.swift; sourceTree = "<group>"; };
+		245BCD5B29222EE60046EA83 /* PlaybookPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybookPresenter.swift; sourceTree = "<group>"; };
+		245BCD6029224D140046EA83 /* PlaybookDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybookDetailsViewController.swift; sourceTree = "<group>"; };
 		245EAC4D290FEA28009CDEC3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		245EAC4F290FEA75009CDEC3 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		245EAC52290FEA88009CDEC3 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
@@ -166,6 +176,7 @@
 				24BDF4F6291A814F00C2170A /* GameModel.swift */,
 				24BDF4F8291A869200C2170A /* MedicalModel.swift */,
 				24BDF4FA291A989E00C2170A /* WeightRoomModel.swift */,
+				245BCD55292223A80046EA83 /* GamePlanModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -206,8 +217,20 @@
 				245EAC56291001E6009CDEC3 /* ChatViewController.swift */,
 				24A67D76291CE850007771CD /* LockerRoomViewController.swift */,
 				24A67D74291CE834007771CD /* LoockerRoomTableViewCell.swift */,
+				245BCD5F29224CDF0046EA83 /* PlaybookMVP */,
 			);
 			path = HomeMVP;
+			sourceTree = "<group>";
+		};
+		245BCD5F29224CDF0046EA83 /* PlaybookMVP */ = {
+			isa = PBXGroup;
+			children = (
+				245BCD5729222C240046EA83 /* PlaybookViewController.swift */,
+				245BCD5B29222EE60046EA83 /* PlaybookPresenter.swift */,
+				245BCD5929222E890046EA83 /* PlaybookTableViewCell.swift */,
+				245BCD6029224D140046EA83 /* PlaybookDetailsViewController.swift */,
+			);
+			path = PlaybookMVP;
 			sourceTree = "<group>";
 		};
 		24BB276D291936BD00D6C4CE /* CalendarMVP */ = {
@@ -367,9 +390,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				245BCD5A29222E890046EA83 /* PlaybookTableViewCell.swift in Sources */,
 				245EAC59291001F4009CDEC3 /* CalendarViewController.swift in Sources */,
 				243536E1290FDC0A0014DF4B /* LoginPresenter.swift in Sources */,
 				246BDF7C291D1151004768FA /* DetailsTableViewCell.swift in Sources */,
+				245BCD5829222C240046EA83 /* PlaybookViewController.swift in Sources */,
 				24280556290BE30900A10601 /* LoginViewController.swift in Sources */,
 				24BDF4F5291A7FBD00C2170A /* Practice Model.swift in Sources */,
 				24BB2771291936FD00D6C4CE /* CalendarView.swift in Sources */,
@@ -380,16 +405,19 @@
 				24A67D75291CE834007771CD /* LoockerRoomTableViewCell.swift in Sources */,
 				24280552290BE30900A10601 /* AppDelegate.swift in Sources */,
 				240F0737291105E50057F0CD /* HomeView.swift in Sources */,
+				245BCD5C29222EE60046EA83 /* PlaybookPresenter.swift in Sources */,
 				240F0739291108BE0057F0CD /* PlayerModel.swift in Sources */,
 				245EAC4E290FEA28009CDEC3 /* TabBarViewController.swift in Sources */,
 				243536DF290FDBFD0014DF4B /* LoginView.swift in Sources */,
 				24F0CC99290FC7B900E16B2F /* HomeViewController.swift in Sources */,
 				24DE18BA2914F9F200A960C0 /* LeaguesTableViewCell.swift in Sources */,
 				245EAC57291001E6009CDEC3 /* ChatViewController.swift in Sources */,
+				245BCD6129224D140046EA83 /* PlaybookDetailsViewController.swift in Sources */,
 				245EAC55291000E4009CDEC3 /* HomePresenter.swift in Sources */,
 				24A67D79291CFD9E007771CD /* DetailsViewController.swift in Sources */,
 				24BB50812913D8C8006E68F2 /* LeaguesTableViewController.swift in Sources */,
 				24BB276B2919340C00D6C4CE /* WeightsModel.swift in Sources */,
+				245BCD56292223A80046EA83 /* GamePlanModel.swift in Sources */,
 				24A67D77291CE850007771CD /* LockerRoomViewController.swift in Sources */,
 				24BDF4FB291A989E00C2170A /* WeightRoomModel.swift in Sources */,
 				24BB2773291945A500D6C4CE /* CalendarTableViewCell.swift in Sources */,
