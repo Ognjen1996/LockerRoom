@@ -2,15 +2,15 @@
 import Foundation
 import Alamofire
 
-protocol WeightRoomPresenterDelegate: AnyObject {
-    func weightRoomPresenter(_ presenter: WeightRoomPresenter, data: [WeightRoomData])
+protocol PracticeRoomPresenterDelegate: AnyObject {
+    func practiceRoomPresenter(_ presenter: PracticeRoomPresenter, data: [PracticeData])
 }
 
-class WeightRoomPresenter {
+class PracticeRoomPresenter {
     
     var bearer: String = "Bearer "
     var user: Login
-    weak var delegate: WeightRoomPresenterDelegate?
+    weak var delegate: PracticeRoomPresenterDelegate?
     
     
     init(user: Login) {
@@ -18,8 +18,8 @@ class WeightRoomPresenter {
         self.bearer += user.access_token
     }
     
-    func fethcData() {
-        let baseURL = "https://app.lockerroomsystem.com/api/weights"
+    func fetchData() {
+        let baseURL = "https://app.lockerroomsystem.com/api/calendar/2"
         guard let url = URL(string: baseURL) else {return}
         var request = URLRequest(url: url)
         request.method = .get
@@ -31,8 +31,9 @@ class WeightRoomPresenter {
             else {return}
             do {
                 let decoder = JSONDecoder()
-                let userData = try decoder.decode(WeightRoomModel.self, from: data)
-                self.delegate?.weightRoomPresenter(self, data: userData.data)
+                let userData = try decoder.decode(PracticeModel.self, from: data)
+                let dataArray = userData.data.main_types.practice
+                self.delegate?.practiceRoomPresenter(self, data: dataArray)
                 
             } catch let error {
                 debugPrint(error)

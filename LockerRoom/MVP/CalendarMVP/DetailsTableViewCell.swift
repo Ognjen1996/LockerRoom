@@ -81,4 +81,14 @@ class DetailsTableViewCell: UITableViewCell {
         commentLabel.text = data.comment
         setsLabel.text = data.date
     }
+    func setupWeightroom(with data: WeightRoomData, n: Int) {
+        homeTeamImage.isHidden = true
+        awayTeamImage.isHidden = true
+        nameLabel.text = data.name
+        
+        let date = data.date
+        let dayHour = date.split(separator: " ")
+        commentLabel.text = dayHour[0] + "\n" + dayHour[1]
+        setsLabel.text = "Broj vežbi: " + String(data.exericiseCount) + " Broj igrača: " + String(data.playersCount)
+    }
 }

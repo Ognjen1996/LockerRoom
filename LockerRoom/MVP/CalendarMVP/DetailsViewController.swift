@@ -9,12 +9,14 @@ import UIKit
 
 class DetailsViewController: UIViewController {
 
-
+    var weightRoomData: [WeightRoomData]?
+    
     var selectedWeight: WeightData?
     var selectedGame: GameData?
     var selectedMedical: MedicalData?
     var selectedPractice: PracticeData?
     var flag: Int?
+    var isOpenedFormCalendar: Bool = true
     
     @IBOutlet weak var tableView: UITableView!
 
@@ -67,6 +69,20 @@ extension DetailsViewController: UITableViewDataSource {
                 cell.setupWeights(with: selectedWeight, n: indexPath.row)
                 return cell
             }
+        }
+        if flag == 5 {
+            if let weightRoomData = weightRoomData {
+                let roomData = weightRoomData[indexPath.row]
+                
+                cell.setupWeightroom(with: roomData, n: indexPath.row)
+            }
+            return cell
+        }
+        if flag == 6 {
+            if let selectedPractice  = selectedPractice {
+                cell.setupPractice(with: selectedPractice, n: indexPath.row)
+            }
+            return cell
         }
         return cell
     }

@@ -52,6 +52,7 @@ extension HomeViewController {
     @IBAction private func showMenu() {
         let storyboad = UIStoryboard(name: "Home", bundle: nil)
         let vc = storyboad.instantiateViewController(withIdentifier: "LockerRoomViewController") as! LockerRoomViewController
+        vc.user = presenter?.user
         show(vc, sender: self)
     }
 }

@@ -43,6 +43,7 @@
 		24BDF4F9291A869200C2170A /* MedicalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDF4F8291A869200C2170A /* MedicalModel.swift */; };
 		24BDF4FB291A989E00C2170A /* WeightRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDF4FA291A989E00C2170A /* WeightRoomModel.swift */; };
 		24DE18BA2914F9F200A960C0 /* LeaguesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DE18B92914F9F200A960C0 /* LeaguesTableViewCell.swift */; };
+		24E1FC382923C94E005895A8 /* PracticeRoomPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E1FC372923C94E005895A8 /* PracticeRoomPresenter.swift */; };
 		24E67BCE290BEF8800DEBE16 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E67BCD290BEF8800DEBE16 /* LoginModel.swift */; };
 		24F0CC97290FC76F00E16B2F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24F0CC96290FC76F00E16B2F /* Home.storyboard */; };
 		24F0CC99290FC7B900E16B2F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0CC98290FC7B900E16B2F /* HomeViewController.swift */; };
@@ -88,6 +89,7 @@
 		24BDF4F8291A869200C2170A /* MedicalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalModel.swift; sourceTree = "<group>"; };
 		24BDF4FA291A989E00C2170A /* WeightRoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightRoomModel.swift; sourceTree = "<group>"; };
 		24DE18B92914F9F200A960C0 /* LeaguesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesTableViewCell.swift; sourceTree = "<group>"; };
+		24E1FC372923C94E005895A8 /* PracticeRoomPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeRoomPresenter.swift; sourceTree = "<group>"; };
 		24E67BCD290BEF8800DEBE16 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		24F0CC96290FC76F00E16B2F /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		24F0CC98290FC7B900E16B2F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				245EAC56291001E6009CDEC3 /* ChatViewController.swift */,
 				24A67D76291CE850007771CD /* LockerRoomViewController.swift */,
 				24A67D74291CE834007771CD /* LoockerRoomTableViewCell.swift */,
+				24E1FC362923C494005895A8 /* PracticeBookMVP */,
 				245BCD6529226EEF0046EA83 /* WeightRoomMVP */,
 				245BCD5F29224CDF0046EA83 /* PlaybookMVP */,
 			);
@@ -267,6 +270,14 @@
 				24DE18B92914F9F200A960C0 /* LeaguesTableViewCell.swift */,
 			);
 			path = LeaguesMVP;
+			sourceTree = "<group>";
+		};
+		24E1FC362923C494005895A8 /* PracticeBookMVP */ = {
+			isa = PBXGroup;
+			children = (
+				24E1FC372923C94E005895A8 /* PracticeRoomPresenter.swift */,
+			);
+			path = PracticeBookMVP;
 			sourceTree = "<group>";
 		};
 		472AA541EA83EFD976B24436 /* Frameworks */ = {
@@ -428,6 +439,7 @@
 				245EAC57291001E6009CDEC3 /* ChatViewController.swift in Sources */,
 				245BCD6129224D140046EA83 /* PlaybookDetailsViewController.swift in Sources */,
 				245EAC55291000E4009CDEC3 /* HomePresenter.swift in Sources */,
+				24E1FC382923C94E005895A8 /* PracticeRoomPresenter.swift in Sources */,
 				24A67D79291CFD9E007771CD /* DetailsViewController.swift in Sources */,
 				24BB50812913D8C8006E68F2 /* LeaguesTableViewController.swift in Sources */,
 				24BB276B2919340C00D6C4CE /* WeightsModel.swift in Sources */,

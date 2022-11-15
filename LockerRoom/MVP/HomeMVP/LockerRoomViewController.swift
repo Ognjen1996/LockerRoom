@@ -12,17 +12,8 @@ class LockerRoomViewController: UIViewController {
     @IBOutlet weak var tableViewLR: UITableView!
     var menuData = ["Roster", "Game Plan", "Practice Plan", "Weight Room", "Playbook", "Self Scouting", "Medical", "Stats"]
     
-//    var user: Login
-//
-//    init(user: Login) {
-//
-//        self.user = user
-//        super.init(nibName: nil, bundle: nil)
-//    }
-//
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
+    var user: Login?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +22,25 @@ class LockerRoomViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 }
+
 extension LockerRoomViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if indexPath.row == 2 {
+            let storyboard = UIStoryboard(name: "Home", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "WeightRoomViewController") as! WeightRoomViewController
+            guard let user = user else {return}
+//            vc.presenter = CalendarPresenter(user: user)
+            vc.presenter1 = PracticeRoomPresenter(user: user)
+            vc.isForPracticeRoom = true
+            show(vc, sender: self)
+        }
         if indexPath.row == 3 {
             let storyboard = UIStoryboard(name: "Home", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "WeightRoomViewController") as! WeightRoomViewController
-            vc.presenter = WeightRoomPresenter()
+            guard let user = user else {return}
+            vc.presenter = WeightRoomPresenter(user: user)
+            vc.isForWeightRoom = true
             show(vc, sender: self)
         }
         if indexPath.row == 4 {
