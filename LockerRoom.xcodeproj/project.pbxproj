@@ -16,11 +16,14 @@
 		2428055E290BE30A00A10601 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2428055C290BE30A00A10601 /* LaunchScreen.storyboard */; };
 		243536DF290FDBFD0014DF4B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243536DE290FDBFD0014DF4B /* LoginView.swift */; };
 		243536E1290FDC0A0014DF4B /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243536E0290FDC0A0014DF4B /* LoginPresenter.swift */; };
+		2458C6C029237B8800D10AF3 /* WeightRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458C6BF29237B8800D10AF3 /* WeightRoomViewController.swift */; };
+		2458C6C229237BAF00D10AF3 /* WeightRoomPresneter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458C6C129237BAF00D10AF3 /* WeightRoomPresneter.swift */; };
 		245BCD56292223A80046EA83 /* GamePlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245BCD55292223A80046EA83 /* GamePlanModel.swift */; };
 		245BCD5829222C240046EA83 /* PlaybookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245BCD5729222C240046EA83 /* PlaybookViewController.swift */; };
 		245BCD5A29222E890046EA83 /* PlaybookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245BCD5929222E890046EA83 /* PlaybookTableViewCell.swift */; };
 		245BCD5C29222EE60046EA83 /* PlaybookPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245BCD5B29222EE60046EA83 /* PlaybookPresenter.swift */; };
 		245BCD6129224D140046EA83 /* PlaybookDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245BCD6029224D140046EA83 /* PlaybookDetailsViewController.swift */; };
+		245BCD6329225CD80046EA83 /* PlaybookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245BCD6229225CD80046EA83 /* PlaybookCollectionViewCell.swift */; };
 		245EAC4E290FEA28009CDEC3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245EAC4D290FEA28009CDEC3 /* TabBarViewController.swift */; };
 		245EAC50290FEA75009CDEC3 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245EAC4F290FEA75009CDEC3 /* Calendar.storyboard */; };
 		245EAC53290FEA88009CDEC3 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245EAC52290FEA88009CDEC3 /* Chat.storyboard */; };
@@ -33,7 +36,6 @@
 		24A67D79291CFD9E007771CD /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A67D78291CFD9E007771CD /* DetailsViewController.swift */; };
 		24BB276B2919340C00D6C4CE /* WeightsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BB276A2919340C00D6C4CE /* WeightsModel.swift */; };
 		24BB276F291936E900D6C4CE /* CalendarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BB276E291936E900D6C4CE /* CalendarPresenter.swift */; };
-		24BB2771291936FD00D6C4CE /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BB2770291936FD00D6C4CE /* CalendarView.swift */; };
 		24BB2773291945A500D6C4CE /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BB2772291945A500D6C4CE /* CalendarTableViewCell.swift */; };
 		24BB50812913D8C8006E68F2 /* LeaguesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BB50802913D8C8006E68F2 /* LeaguesTableViewController.swift */; };
 		24BDF4F5291A7FBD00C2170A /* Practice Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDF4F4291A7FBD00C2170A /* Practice Model.swift */; };
@@ -59,11 +61,14 @@
 		2428055F290BE30A00A10601 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		243536DE290FDBFD0014DF4B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		243536E0290FDC0A0014DF4B /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		2458C6BF29237B8800D10AF3 /* WeightRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightRoomViewController.swift; sourceTree = "<group>"; };
+		2458C6C129237BAF00D10AF3 /* WeightRoomPresneter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightRoomPresneter.swift; sourceTree = "<group>"; };
 		245BCD55292223A80046EA83 /* GamePlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlanModel.swift; sourceTree = "<group>"; };
 		245BCD5729222C240046EA83 /* PlaybookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybookViewController.swift; sourceTree = "<group>"; };
 		245BCD5929222E890046EA83 /* PlaybookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybookTableViewCell.swift; sourceTree = "<group>"; };
 		245BCD5B29222EE60046EA83 /* PlaybookPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybookPresenter.swift; sourceTree = "<group>"; };
 		245BCD6029224D140046EA83 /* PlaybookDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybookDetailsViewController.swift; sourceTree = "<group>"; };
+		245BCD6229225CD80046EA83 /* PlaybookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybookCollectionViewCell.swift; sourceTree = "<group>"; };
 		245EAC4D290FEA28009CDEC3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		245EAC4F290FEA75009CDEC3 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		245EAC52290FEA88009CDEC3 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
@@ -76,7 +81,6 @@
 		24A67D78291CFD9E007771CD /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		24BB276A2919340C00D6C4CE /* WeightsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightsModel.swift; sourceTree = "<group>"; };
 		24BB276E291936E900D6C4CE /* CalendarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPresenter.swift; sourceTree = "<group>"; };
-		24BB2770291936FD00D6C4CE /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		24BB2772291945A500D6C4CE /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		24BB50802913D8C8006E68F2 /* LeaguesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesTableViewController.swift; sourceTree = "<group>"; };
 		24BDF4F4291A7FBD00C2170A /* Practice Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Practice Model.swift"; sourceTree = "<group>"; };
@@ -217,6 +221,7 @@
 				245EAC56291001E6009CDEC3 /* ChatViewController.swift */,
 				24A67D76291CE850007771CD /* LockerRoomViewController.swift */,
 				24A67D74291CE834007771CD /* LoockerRoomTableViewCell.swift */,
+				245BCD6529226EEF0046EA83 /* WeightRoomMVP */,
 				245BCD5F29224CDF0046EA83 /* PlaybookMVP */,
 			);
 			path = HomeMVP;
@@ -229,15 +234,24 @@
 				245BCD5B29222EE60046EA83 /* PlaybookPresenter.swift */,
 				245BCD5929222E890046EA83 /* PlaybookTableViewCell.swift */,
 				245BCD6029224D140046EA83 /* PlaybookDetailsViewController.swift */,
+				245BCD6229225CD80046EA83 /* PlaybookCollectionViewCell.swift */,
 			);
 			path = PlaybookMVP;
+			sourceTree = "<group>";
+		};
+		245BCD6529226EEF0046EA83 /* WeightRoomMVP */ = {
+			isa = PBXGroup;
+			children = (
+				2458C6BF29237B8800D10AF3 /* WeightRoomViewController.swift */,
+				2458C6C129237BAF00D10AF3 /* WeightRoomPresneter.swift */,
+			);
+			path = WeightRoomMVP;
 			sourceTree = "<group>";
 		};
 		24BB276D291936BD00D6C4CE /* CalendarMVP */ = {
 			isa = PBXGroup;
 			children = (
 				245EAC58291001F4009CDEC3 /* CalendarViewController.swift */,
-				24BB2770291936FD00D6C4CE /* CalendarView.swift */,
 				24BB276E291936E900D6C4CE /* CalendarPresenter.swift */,
 				24BB2772291945A500D6C4CE /* CalendarTableViewCell.swift */,
 				24A67D78291CFD9E007771CD /* DetailsViewController.swift */,
@@ -396,8 +410,8 @@
 				246BDF7C291D1151004768FA /* DetailsTableViewCell.swift in Sources */,
 				245BCD5829222C240046EA83 /* PlaybookViewController.swift in Sources */,
 				24280556290BE30900A10601 /* LoginViewController.swift in Sources */,
+				245BCD6329225CD80046EA83 /* PlaybookCollectionViewCell.swift in Sources */,
 				24BDF4F5291A7FBD00C2170A /* Practice Model.swift in Sources */,
-				24BB2771291936FD00D6C4CE /* CalendarView.swift in Sources */,
 				24BDF4F7291A814F00C2170A /* GameModel.swift in Sources */,
 				24BDF4F9291A869200C2170A /* MedicalModel.swift in Sources */,
 				24E67BCE290BEF8800DEBE16 /* LoginModel.swift in Sources */,
@@ -419,8 +433,10 @@
 				24BB276B2919340C00D6C4CE /* WeightsModel.swift in Sources */,
 				245BCD56292223A80046EA83 /* GamePlanModel.swift in Sources */,
 				24A67D77291CE850007771CD /* LockerRoomViewController.swift in Sources */,
+				2458C6C029237B8800D10AF3 /* WeightRoomViewController.swift in Sources */,
 				24BDF4FB291A989E00C2170A /* WeightRoomModel.swift in Sources */,
 				24BB2773291945A500D6C4CE /* CalendarTableViewCell.swift in Sources */,
+				2458C6C229237BAF00D10AF3 /* WeightRoomPresneter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

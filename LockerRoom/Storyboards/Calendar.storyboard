@@ -17,6 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="czvhome" translatesAutoresizingMaskIntoConstraints="NO" id="J4h-wa-BxL">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="810"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jdb-q6-mWJ" userLabel="buttons">
                                 <rect key="frame" x="0.0" y="91" width="390" height="70"/>
                                 <subviews>
@@ -44,7 +47,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.39194432947019869" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="IXl-vT-dtu"/>
                                     <constraint firstItem="NqS-vA-c4z" firstAttribute="top" secondItem="Jdb-q6-mWJ" secondAttribute="top" constant="20" symbolic="YES" id="ih0-8o-NJC"/>
@@ -60,7 +63,7 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NEe-zg-Rxz" customClass="FSCalendar">
                                                 <rect key="frame" x="16" y="8" width="358" height="256.66666666666669"/>
-                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" red="0.71279198232323226" green="0.71279198232323226" blue="0.71279198232323226" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="tintColor" red="0.9772214588" green="0.31860199010000001" blue="0.2466918028" alpha="0.54602465990000004" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
@@ -134,6 +137,7 @@
                                                                                     <rect key="frame" x="83" y="0.0" width="67" height="50"/>
                                                                                 </imageView>
                                                                             </subviews>
+                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="150" id="R9c-Bj-Pib"/>
                                                                                 <constraint firstAttribute="height" constant="50" id="nso-Ic-fA2"/>
@@ -167,7 +171,7 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </tableViewCellContentView>
-                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.35955608443708609" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="backgroundColor" red="0.71279198229999996" green="0.71279198229999996" blue="0.71279198229999996" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                 <integer key="value" value="20"/>
@@ -183,7 +187,7 @@
                                                 </prototypes>
                                             </tableView>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="XRi-BP-May" firstAttribute="height" secondItem="NEe-zg-Rxz" secondAttribute="height" multiplier="1.4" id="84C-DU-BPt"/>
                                             <constraint firstItem="XRi-BP-May" firstAttribute="leading" secondItem="NEe-zg-Rxz" secondAttribute="leading" id="CsK-w6-qib"/>
@@ -195,7 +199,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.40239548841059603" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="b1p-HR-cUt" firstAttribute="height" secondItem="PN0-3l-ItN" secondAttribute="height" priority="250" id="6TE-hs-QfO"/>
                                     <constraint firstItem="b1p-HR-cUt" firstAttribute="width" secondItem="PN0-3l-ItN" secondAttribute="width" priority="250" id="CiY-3l-wHO"/>
@@ -208,14 +212,18 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="J4h-wa-BxL" secondAttribute="bottom" id="5KF-Z6-yg1"/>
                             <constraint firstItem="PN0-3l-ItN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="9Th-TE-2kh"/>
+                            <constraint firstItem="J4h-wa-BxL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="BlE-5Q-ld1"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="PN0-3l-ItN" secondAttribute="bottom" id="H1Z-1A-4Kk"/>
                             <constraint firstItem="Jdb-q6-mWJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="JVj-ow-s8I"/>
                             <constraint firstItem="PN0-3l-ItN" firstAttribute="top" secondItem="Jdb-q6-mWJ" secondAttribute="bottom" constant="5" id="NVA-H3-uK6"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PN0-3l-ItN" secondAttribute="trailing" id="Qzu-7u-ffh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="J4h-wa-BxL" secondAttribute="trailing" id="TWV-YC-bOe"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Jdb-q6-mWJ" secondAttribute="trailing" id="w1d-4K-vyU"/>
+                            <constraint firstItem="J4h-wa-BxL" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="yG6-1c-zcy"/>
                             <constraint firstItem="Jdb-q6-mWJ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="zA4-pM-T3f"/>
                         </constraints>
                     </view>
@@ -352,4 +360,7 @@
             <point key="canvasLocation" x="56.92307692307692" y="-2.1327014218009479"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="czvhome" width="900" height="506"/>
+    </resources>
 </document>

@@ -67,5 +67,12 @@ class CalendarTableViewCell: UITableViewCell {
         let awayTeamImg = URL(string: game[n].team_away.team_logo)
         awayTeamImageView.kf.setImage(with: awayTeamImg)
     }
+    
+    func setupWeightRoom(with data: WeightRoomData) {
+        nameLabel.text = data.name
+        let date = data.date
+        let dayHour = date.split(separator: " ")
+        datelabel.text = dayHour[0] + "\n" + dayHour[1]
+    }
 
 }

@@ -35,7 +35,7 @@ extension PlaybookViewController: UITableViewDelegate {
 }
 extension PlaybookViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count ?? 5
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

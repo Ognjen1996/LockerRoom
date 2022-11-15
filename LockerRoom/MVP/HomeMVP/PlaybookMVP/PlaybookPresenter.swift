@@ -31,7 +31,6 @@ class PlaybookPresenter {
             do {
                 let decoder = JSONDecoder()
                 let userData = try decoder.decode(PlaybookModel.self, from: data)
-                debugPrint(userData)
                 let userArray = userData.data
                 self.delegate?.playbookPresenter(self, data: userArray)
             } catch let error {

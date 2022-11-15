@@ -8,10 +8,21 @@
 import UIKit
 
 class LockerRoomViewController: UIViewController {
-
     
     @IBOutlet weak var tableViewLR: UITableView!
     var menuData = ["Roster", "Game Plan", "Practice Plan", "Weight Room", "Playbook", "Self Scouting", "Medical", "Stats"]
+    
+//    var user: Login
+//
+//    init(user: Login) {
+//
+//        self.user = user
+//        super.init(nibName: nil, bundle: nil)
+//    }
+//
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +33,12 @@ class LockerRoomViewController: UIViewController {
 }
 extension LockerRoomViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 3 {
+            let storyboard = UIStoryboard(name: "Home", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "WeightRoomViewController") as! WeightRoomViewController
+            vc.presenter = WeightRoomPresenter()
+            show(vc, sender: self)
+        }
         if indexPath.row == 4 {
             let vc = storyboard?.instantiateViewController(withIdentifier: "PlaybookViewController") as! PlaybookViewController
             vc.presenter = PlaybookPresenter()
