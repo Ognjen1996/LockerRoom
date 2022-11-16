@@ -24,13 +24,20 @@ class WeightRoomViewController: UIViewController {
             tableView.reloadData()
         }
     }
+    var selfScoutingData: SelfScoutingData? {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     var isForMedicalRoom: Bool = false
     var isForPracticeRoom: Bool = false
     var isForWeightRoom: Bool = false
+    var isForSelfScouting: Bool = false
     var presenter1: PracticeRoomPresenter?
     var presenter: WeightRoomPresenter?
     var presenter2: CalendarPresenter?
+    var presenter3: SeflScoutingPresenter?
     @IBOutlet weak var tableView: UITableView!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,13 +51,14 @@ class WeightRoomViewController: UIViewController {
         if isForMedicalRoom {
             presenter2?.fetchData(for: "3")
         }
+        if isForSelfScouting {
+            presenter3?.fetchData()
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter?.delegate = self
-        presenter1?.delegate = self
-        presenter2?.delegate = self
+        setupDelegates()
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -66,6 +74,9 @@ extension WeightRoomViewController: UITableViewDataSource {
         }
         if isForMedicalRoom {
             return medicalData?.count ?? 3
+        }
+        if isForSelfScouting {
+            return selfScoutingData?.players.count ?? 1
         }
         return 3
     }
@@ -86,6 +97,11 @@ extension WeightRoomViewController: UITableViewDataSource {
         if isForMedicalRoom {
             guard let medicalData = medicalData else {return cell}
             cell.setupMedicalRoom(with: medicalData, n: indexPath.row)
+            return cell
+        }
+        if isForSelfScouting {
+            guard let selfScoutingData = selfScoutingData else {return cell}
+            cell.setupSelfScouting(with: selfScoutingData, n: indexPath.row)
             return cell
         }
         return cell
@@ -113,10 +129,23 @@ extension WeightRoomViewController: UITableViewDelegate {
             vc.flag = 3
             show(vc, sender: self)
         }
-
+        if isForSelfScouting {
+            let storyboard = UIStoryboard(name: "Home", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "SelfScoutingVideosViewController") as! SelfScoutingVideosViewController
+            guard let selfScoutingData = selfScoutingData else {return}
+            vc.selfScoutingVideos = selfScoutingData
+            show(vc, sender: self)
+        }
     }
 }
-
+private extension WeightRoomViewController {
+    func setupDelegates() {
+        presenter?.delegate = self
+        presenter1?.delegate = self
+        presenter2?.delegate = self
+        presenter3?.delegate = self
+    }
+}
 extension WeightRoomViewController: WeightRoomPresenterDelegate {
     func weightRoomPresenter(_ presenter: WeightRoomPresenter, data: [WeightRoomData]) {
         self.data = data
@@ -143,6 +172,11 @@ extension WeightRoomViewController: CalendarPresenterDelegate {
     
     func calendarPresenterForPractice(_ presenter: CalendarPresenter, practiceData: [PracticeData]) {
         
+    }
+}
+extension WeightRoomViewController: SeflScoutingPresenterDelegate {
+    func selfScoutingPresenter(_ preseneter: SeflScoutingPresenter, data: SelfScoutingData) {
+        self.selfScoutingData = data
     }
     
     

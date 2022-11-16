@@ -16,6 +16,9 @@
 		2428055E290BE30A00A10601 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2428055C290BE30A00A10601 /* LaunchScreen.storyboard */; };
 		243536DF290FDBFD0014DF4B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243536DE290FDBFD0014DF4B /* LoginView.swift */; };
 		243536E1290FDC0A0014DF4B /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243536E0290FDC0A0014DF4B /* LoginPresenter.swift */; };
+		245147C52924F631005F08E2 /* SelfScoutingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245147C42924F631005F08E2 /* SelfScoutingPresenter.swift */; };
+		245147C72924F68E005F08E2 /* SelfScoutingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245147C62924F68E005F08E2 /* SelfScoutingModel.swift */; };
+		245147C929251B7B005F08E2 /* SelfScoutingVideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245147C829251B7B005F08E2 /* SelfScoutingVideosViewController.swift */; };
 		2458C6C029237B8800D10AF3 /* WeightRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458C6BF29237B8800D10AF3 /* WeightRoomViewController.swift */; };
 		2458C6C229237BAF00D10AF3 /* WeightRoomPresneter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458C6C129237BAF00D10AF3 /* WeightRoomPresneter.swift */; };
 		245BCD56292223A80046EA83 /* GamePlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245BCD55292223A80046EA83 /* GamePlanModel.swift */; };
@@ -62,6 +65,9 @@
 		2428055F290BE30A00A10601 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		243536DE290FDBFD0014DF4B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		243536E0290FDC0A0014DF4B /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		245147C42924F631005F08E2 /* SelfScoutingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfScoutingPresenter.swift; sourceTree = "<group>"; };
+		245147C62924F68E005F08E2 /* SelfScoutingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfScoutingModel.swift; sourceTree = "<group>"; };
+		245147C829251B7B005F08E2 /* SelfScoutingVideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfScoutingVideosViewController.swift; sourceTree = "<group>"; };
 		2458C6BF29237B8800D10AF3 /* WeightRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightRoomViewController.swift; sourceTree = "<group>"; };
 		2458C6C129237BAF00D10AF3 /* WeightRoomPresneter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightRoomPresneter.swift; sourceTree = "<group>"; };
 		245BCD55292223A80046EA83 /* GamePlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlanModel.swift; sourceTree = "<group>"; };
@@ -183,6 +189,7 @@
 				24BDF4F8291A869200C2170A /* MedicalModel.swift */,
 				24BDF4FA291A989E00C2170A /* WeightRoomModel.swift */,
 				245BCD55292223A80046EA83 /* GamePlanModel.swift */,
+				245147C62924F68E005F08E2 /* SelfScoutingModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -223,11 +230,21 @@
 				245EAC56291001E6009CDEC3 /* ChatViewController.swift */,
 				24A67D76291CE850007771CD /* LockerRoomViewController.swift */,
 				24A67D74291CE834007771CD /* LoockerRoomTableViewCell.swift */,
+				245147C32924F61A005F08E2 /* SelfScoutingMVP */,
 				24E1FC362923C494005895A8 /* PracticeBookMVP */,
 				245BCD6529226EEF0046EA83 /* WeightRoomMVP */,
 				245BCD5F29224CDF0046EA83 /* PlaybookMVP */,
 			);
 			path = HomeMVP;
+			sourceTree = "<group>";
+		};
+		245147C32924F61A005F08E2 /* SelfScoutingMVP */ = {
+			isa = PBXGroup;
+			children = (
+				245147C42924F631005F08E2 /* SelfScoutingPresenter.swift */,
+				245147C829251B7B005F08E2 /* SelfScoutingVideosViewController.swift */,
+			);
+			path = SelfScoutingMVP;
 			sourceTree = "<group>";
 		};
 		245BCD5F29224CDF0046EA83 /* PlaybookMVP */ = {
@@ -424,6 +441,7 @@
 				245BCD6329225CD80046EA83 /* PlaybookCollectionViewCell.swift in Sources */,
 				24BDF4F5291A7FBD00C2170A /* Practice Model.swift in Sources */,
 				24BDF4F7291A814F00C2170A /* GameModel.swift in Sources */,
+				245147C72924F68E005F08E2 /* SelfScoutingModel.swift in Sources */,
 				24BDF4F9291A869200C2170A /* MedicalModel.swift in Sources */,
 				24E67BCE290BEF8800DEBE16 /* LoginModel.swift in Sources */,
 				24BB276F291936E900D6C4CE /* CalendarPresenter.swift in Sources */,
@@ -434,6 +452,8 @@
 				240F0739291108BE0057F0CD /* PlayerModel.swift in Sources */,
 				245EAC4E290FEA28009CDEC3 /* TabBarViewController.swift in Sources */,
 				243536DF290FDBFD0014DF4B /* LoginView.swift in Sources */,
+				245147C52924F631005F08E2 /* SelfScoutingPresenter.swift in Sources */,
+				245147C929251B7B005F08E2 /* SelfScoutingVideosViewController.swift in Sources */,
 				24F0CC99290FC7B900E16B2F /* HomeViewController.swift in Sources */,
 				24DE18BA2914F9F200A960C0 /* LeaguesTableViewCell.swift in Sources */,
 				245EAC57291001E6009CDEC3 /* ChatViewController.swift in Sources */,

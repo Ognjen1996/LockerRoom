@@ -17,13 +17,13 @@ class CalendarTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+
     }
 
     
@@ -74,6 +74,7 @@ class CalendarTableViewCell: UITableViewCell {
         let dayHour = date.split(separator: " ")
         datelabel.text = dayHour[0] + "\n" + dayHour[1]
     }
+    
     func setupPracticeRoom(with practice: [PracticeData], n: Int) {
         nameLabel.text = practice[n].name
         
@@ -83,11 +84,15 @@ class CalendarTableViewCell: UITableViewCell {
         
     }
     func setupMedicalRoom(with medicals: [MedicalData], n: Int) {
-        nameLabel.text = medicals[n].name + "\n" + medicals[n].comment
+        nameLabel.text = medicals[n].name + "\n"
         
         let date = medicals[n].date
         let dayHour = date.split(separator: " ")
         datelabel.text = dayHour[0] + "\n" + dayHour[1]
+    }
+    func setupSelfScouting(with data: SelfScoutingData, n: Int) {
+        nameLabel.text = data.name
+        datelabel.text = data.videos[n].title + "\n\n Videos: " + String(data.videos.count)
     }
 
 }

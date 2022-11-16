@@ -205,7 +205,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.38850372519999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="b1p-HR-cUt" firstAttribute="height" secondItem="PN0-3l-ItN" secondAttribute="height" priority="250" id="6TE-hs-QfO"/>
                                     <constraint firstItem="b1p-HR-cUt" firstAttribute="width" secondItem="PN0-3l-ItN" secondAttribute="width" priority="250" id="CiY-3l-wHO"/>
@@ -288,7 +288,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6c-ol-LFo">
-                                                                    <rect key="frame" x="0.0" y="50.666666666666686" width="41.333333333333336" height="20.333333333333314"/>
+                                                                    <rect key="frame" x="0.0" y="50.666666666666671" width="41.333333333333336" height="20.333333333333329"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>

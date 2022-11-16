@@ -10,13 +10,13 @@ import UIKit
 class DetailsViewController: UIViewController {
 
     var weightRoomData: WeightRoomData?
-    
+    var selfScoutingVideos: SelfScoutingData?
     var selectedWeight: WeightData?
     var selectedGame: GameData?
     var selectedMedical: MedicalData?
     var selectedPractice: PracticeData?
     var flag: Int?
-    var isOpenedFormCalendar: Bool = true
+//    var isOpenedFormCalendar: Bool = true
     
     @IBOutlet weak var tableView: UITableView!
 

@@ -30,7 +30,6 @@ extension LockerRoomViewController: UITableViewDelegate {
             let storyboard = UIStoryboard(name: "Home", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "WeightRoomViewController") as! WeightRoomViewController
             guard let user = user else {return}
-//            vc.presenter = CalendarPresenter(user: user)
             vc.presenter1 = PracticeRoomPresenter(user: user)
             vc.isForPracticeRoom = true
             vc.isForWeightRoom = false
@@ -45,12 +44,23 @@ extension LockerRoomViewController: UITableViewDelegate {
             vc.isForWeightRoom = true
             vc.isForMedicalRoom = false
             vc.isForPracticeRoom = false
+            vc.isForSelfScouting = false
             show(vc, sender: self)
         }
         if indexPath.row == 4 {
             let vc = storyboard?.instantiateViewController(withIdentifier: "PlaybookViewController") as! PlaybookViewController
             guard let user = user else {return}
             vc.presenter = PlaybookPresenter(user: user)
+            show(vc, sender: self)
+        }
+        if indexPath.row == 5 {
+            let vc = storyboard?.instantiateViewController(withIdentifier: "WeightRoomViewController") as! WeightRoomViewController
+            guard let user = user else {return}
+            vc.presenter3 = SeflScoutingPresenter(user: user)
+            vc.isForWeightRoom = false
+            vc.isForMedicalRoom = false
+            vc.isForPracticeRoom = false
+            vc.isForSelfScouting = true
             show(vc, sender: self)
         }
         if indexPath.row == 6 {
@@ -60,6 +70,7 @@ extension LockerRoomViewController: UITableViewDelegate {
             vc.isForMedicalRoom = true
             vc.isForWeightRoom = false
             vc.isForPracticeRoom = false
+            vc.isForSelfScouting = false
             show(vc, sender: self)
         }
     }
