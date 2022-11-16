@@ -77,7 +77,8 @@ extension WeightRoomViewController: UITableViewDelegate {
         let storyboad = UIStoryboard(name: "Calendar", bundle: nil)
         let vc = storyboad.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
         if isForWeightRoom {
-            vc.weightRoomData = data
+            guard let data = data else {return}
+            vc.weightRoomData = data[indexPath.row]
             vc.flag = 5
             show(vc, sender: self)
         }

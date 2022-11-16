@@ -9,7 +9,7 @@ import UIKit
 
 class DetailsViewController: UIViewController {
 
-    var weightRoomData: [WeightRoomData]?
+    var weightRoomData: WeightRoomData?
     
     var selectedWeight: WeightData?
     var selectedGame: GameData?
@@ -48,12 +48,14 @@ extension DetailsViewController: UITableViewDataSource {
         if flag == 1 {
             if let selectedGame = selectedGame {
                 cell.setupGames(with: selectedGame, n: indexPath.row)
+                cell.isUserInteractionEnabled = false
                 return cell
             }
         }
         if flag == 2 {
             if let selectedPractice = selectedPractice {
                 cell.setupPractice(with: selectedPractice, n: indexPath.row)
+                cell.isUserInteractionEnabled = false
                 return cell
             }
         }
@@ -61,26 +63,28 @@ extension DetailsViewController: UITableViewDataSource {
         if flag == 3 {
             if let selectedMedical = selectedMedical {
                 cell.setupMedical(with: selectedMedical, n: indexPath.row)
+                cell.isUserInteractionEnabled = false
                 return cell
             }
         }
         if flag == 4 {
             if let selectedWeight = selectedWeight {
                 cell.setupWeights(with: selectedWeight, n: indexPath.row)
+                cell.isUserInteractionEnabled = false
                 return cell
             }
         }
         if flag == 5 {
             if let weightRoomData = weightRoomData {
-                let roomData = weightRoomData[indexPath.row]
-                
-                cell.setupWeightroom(with: roomData, n: indexPath.row)
+                cell.setupWeightroom(with: weightRoomData, n: indexPath.row)
+                cell.isUserInteractionEnabled = false
             }
             return cell
         }
         if flag == 6 {
             if let selectedPractice  = selectedPractice {
                 cell.setupPractice(with: selectedPractice, n: indexPath.row)
+                cell.isUserInteractionEnabled = false
             }
             return cell
         }
