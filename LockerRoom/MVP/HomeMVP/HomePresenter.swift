@@ -37,8 +37,6 @@ class HomePresenter {
             do {
                 let decoder = JSONDecoder()
                 let userData = try decoder.decode(PlayerModel.self, from: data)
-//                debugPrint(userData)
-                
                 self.delegate?.homePresenter(self, data: userData)
             } catch let error {
                 debugPrint(error)

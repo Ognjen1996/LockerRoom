@@ -14,16 +14,23 @@ class WeightRoomViewController: UIViewController {
             tableView.reloadData()
         }
     }
-    
     var data: [WeightRoomData]? = [] {
         didSet {
             tableView.reloadData()
         }
     }
+    var medicalData : [MedicalData]? = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
+    var isForMedicalRoom: Bool = false
     var isForPracticeRoom: Bool = false
     var isForWeightRoom: Bool = false
     var presenter1: PracticeRoomPresenter?
     var presenter: WeightRoomPresenter?
+    var presenter2: CalendarPresenter?
     @IBOutlet weak var tableView: UITableView!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,12 +41,16 @@ class WeightRoomViewController: UIViewController {
         if isForPracticeRoom {
             presenter1?.fetchData()
         }
+        if isForMedicalRoom {
+            presenter2?.fetchData(for: "3")
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.delegate = self
         presenter1?.delegate = self
+        presenter2?.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -53,6 +64,9 @@ extension WeightRoomViewController: UITableViewDataSource {
         if isForPracticeRoom {
             return practiceData?.count ?? 3
         }
+        if isForMedicalRoom {
+            return medicalData?.count ?? 3
+        }
         return 3
     }
     
@@ -64,9 +78,14 @@ extension WeightRoomViewController: UITableViewDataSource {
             cell.setupWeightRoom(with: weightRoom)
             return cell
         }
-        else if isForPracticeRoom {
+        if isForPracticeRoom {
             guard let practiceData = practiceData else {return cell}
             cell.setupPracticeRoom(with: practiceData, n: indexPath.row)
+            return cell
+        }
+        if isForMedicalRoom {
+            guard let medicalData = medicalData else {return cell}
+            cell.setupMedicalRoom(with: medicalData, n: indexPath.row)
             return cell
         }
         return cell
@@ -88,6 +107,12 @@ extension WeightRoomViewController: UITableViewDelegate {
             vc.flag = 6
             show(vc, sender: self)
         }
+        if isForMedicalRoom {
+            guard let medicalData = medicalData else {return}
+            vc.selectedMedical = medicalData[indexPath.row]
+            vc.flag = 3
+            show(vc, sender: self)
+        }
 
     }
 }
@@ -101,6 +126,23 @@ extension WeightRoomViewController: WeightRoomPresenterDelegate {
 extension WeightRoomViewController: PracticeRoomPresenterDelegate {
     func practiceRoomPresenter(_ presenter: PracticeRoomPresenter, data: [PracticeData]) {
         self.practiceData = data
+    }
+}
+extension WeightRoomViewController: CalendarPresenterDelegate {
+    func calendarPresenterForWeights(_ presenter: CalendarPresenter, weightData: [WeightData]) {
+        
+    }
+    
+    func calendarPresenterForGames(_ presenter: CalendarPresenter, gameData: [GameData]) {
+        
+    }
+    
+    func calendarPresenterForMedical(_ presenter: CalendarPresenter, medicalData: [MedicalData]) {
+        self.medicalData = medicalData
+    }
+    
+    func calendarPresenterForPractice(_ presenter: CalendarPresenter, practiceData: [PracticeData]) {
+        
     }
     
     

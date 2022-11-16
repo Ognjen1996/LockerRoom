@@ -82,5 +82,12 @@ class CalendarTableViewCell: UITableViewCell {
         datelabel.text = dayHour[0] + "\n" + dayHour[1]
         
     }
+    func setupMedicalRoom(with medicals: [MedicalData], n: Int) {
+        nameLabel.text = medicals[n].name + "\n" + medicals[n].comment
+        
+        let date = medicals[n].date
+        let dayHour = date.split(separator: " ")
+        datelabel.text = dayHour[0] + "\n" + dayHour[1]
+    }
 
 }

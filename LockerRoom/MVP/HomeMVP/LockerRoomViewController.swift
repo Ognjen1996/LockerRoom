@@ -33,6 +33,8 @@ extension LockerRoomViewController: UITableViewDelegate {
 //            vc.presenter = CalendarPresenter(user: user)
             vc.presenter1 = PracticeRoomPresenter(user: user)
             vc.isForPracticeRoom = true
+            vc.isForWeightRoom = false
+            vc.isForMedicalRoom = false
             show(vc, sender: self)
         }
         if indexPath.row == 3 {
@@ -41,11 +43,23 @@ extension LockerRoomViewController: UITableViewDelegate {
             guard let user = user else {return}
             vc.presenter = WeightRoomPresenter(user: user)
             vc.isForWeightRoom = true
+            vc.isForMedicalRoom = false
+            vc.isForPracticeRoom = false
             show(vc, sender: self)
         }
         if indexPath.row == 4 {
             let vc = storyboard?.instantiateViewController(withIdentifier: "PlaybookViewController") as! PlaybookViewController
-            vc.presenter = PlaybookPresenter()
+            guard let user = user else {return}
+            vc.presenter = PlaybookPresenter(user: user)
+            show(vc, sender: self)
+        }
+        if indexPath.row == 6 {
+            let vc = storyboard?.instantiateViewController(withIdentifier: "WeightRoomViewController") as! WeightRoomViewController
+            guard let user = user else {return}
+            vc.presenter2 = CalendarPresenter(user: user)
+            vc.isForMedicalRoom = true
+            vc.isForWeightRoom = false
+            vc.isForPracticeRoom = false
             show(vc, sender: self)
         }
     }

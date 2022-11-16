@@ -15,6 +15,13 @@ protocol PlaybookPresenterDelegate: AnyObject {
 
 class PlaybookPresenter {
     
+    var user: Login
+    var bearer: String = "Bearer "
+    
+    init(user: Login) {
+        self.user = user
+        self.bearer += user.access_token
+    }
     weak var delegate: PlaybookPresenterDelegate?
  
     
