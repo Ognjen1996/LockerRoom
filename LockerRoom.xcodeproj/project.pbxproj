@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2405036F29261D9900C230F0 /* RosterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2405036E29261D9900C230F0 /* RosterPresenter.swift */; };
+		2405037129261ECA00C230F0 /* RosterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2405037029261ECA00C230F0 /* RosterModel.swift */; };
+		240503732926209500C230F0 /* RosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240503722926209500C230F0 /* RosterViewController.swift */; };
+		2405037529262C2800C230F0 /* RosterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2405037429262C2800C230F0 /* RosterTableViewCell.swift */; };
 		240F0737291105E50057F0CD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240F0736291105E50057F0CD /* HomeView.swift */; };
 		240F0739291108BE0057F0CD /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240F0738291108BE0057F0CD /* PlayerModel.swift */; };
 		24280552290BE30900A10601 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24280551290BE30900A10601 /* AppDelegate.swift */; };
@@ -54,6 +58,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2405036E29261D9900C230F0 /* RosterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterPresenter.swift; sourceTree = "<group>"; };
+		2405037029261ECA00C230F0 /* RosterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterModel.swift; sourceTree = "<group>"; };
+		240503722926209500C230F0 /* RosterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterViewController.swift; sourceTree = "<group>"; };
+		2405037429262C2800C230F0 /* RosterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterTableViewCell.swift; sourceTree = "<group>"; };
 		240F0736291105E50057F0CD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		240F0738291108BE0057F0CD /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
 		2428054E290BE30900A10601 /* LockerRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LockerRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +124,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2405036D29261D8300C230F0 /* RosterMVP */ = {
+			isa = PBXGroup;
+			children = (
+				2405036E29261D9900C230F0 /* RosterPresenter.swift */,
+				240503722926209500C230F0 /* RosterViewController.swift */,
+				2405037429262C2800C230F0 /* RosterTableViewCell.swift */,
+			);
+			path = RosterMVP;
+			sourceTree = "<group>";
+		};
 		24280545290BE30900A10601 = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +208,7 @@
 				24BDF4FA291A989E00C2170A /* WeightRoomModel.swift */,
 				245BCD55292223A80046EA83 /* GamePlanModel.swift */,
 				245147C62924F68E005F08E2 /* SelfScoutingModel.swift */,
+				2405037029261ECA00C230F0 /* RosterModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -230,6 +249,7 @@
 				245EAC56291001E6009CDEC3 /* ChatViewController.swift */,
 				24A67D76291CE850007771CD /* LockerRoomViewController.swift */,
 				24A67D74291CE834007771CD /* LoockerRoomTableViewCell.swift */,
+				2405036D29261D8300C230F0 /* RosterMVP */,
 				245147C32924F61A005F08E2 /* SelfScoutingMVP */,
 				24E1FC362923C494005895A8 /* PracticeBookMVP */,
 				245BCD6529226EEF0046EA83 /* WeightRoomMVP */,
@@ -453,6 +473,9 @@
 				245EAC4E290FEA28009CDEC3 /* TabBarViewController.swift in Sources */,
 				243536DF290FDBFD0014DF4B /* LoginView.swift in Sources */,
 				245147C52924F631005F08E2 /* SelfScoutingPresenter.swift in Sources */,
+				2405037529262C2800C230F0 /* RosterTableViewCell.swift in Sources */,
+				2405036F29261D9900C230F0 /* RosterPresenter.swift in Sources */,
+				2405037129261ECA00C230F0 /* RosterModel.swift in Sources */,
 				245147C929251B7B005F08E2 /* SelfScoutingVideosViewController.swift in Sources */,
 				24F0CC99290FC7B900E16B2F /* HomeViewController.swift in Sources */,
 				24DE18BA2914F9F200A960C0 /* LeaguesTableViewCell.swift in Sources */,
@@ -465,6 +488,7 @@
 				24BB276B2919340C00D6C4CE /* WeightsModel.swift in Sources */,
 				245BCD56292223A80046EA83 /* GamePlanModel.swift in Sources */,
 				24A67D77291CE850007771CD /* LockerRoomViewController.swift in Sources */,
+				240503732926209500C230F0 /* RosterViewController.swift in Sources */,
 				2458C6C029237B8800D10AF3 /* WeightRoomViewController.swift in Sources */,
 				24BDF4FB291A989E00C2170A /* WeightRoomModel.swift in Sources */,
 				24BB2773291945A500D6C4CE /* CalendarTableViewCell.swift in Sources */,

@@ -25,7 +25,21 @@ class LockerRoomViewController: UIViewController {
 
 extension LockerRoomViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if indexPath.row == 0 {
+            let storyboard = UIStoryboard(name: "Home", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "RosterViewController") as! RosterViewController
+            guard let user = user else {return}
+            vc.presenter = RosterPresenter(user: user)
+            show(vc, sender: self)
+        }
+        if indexPath.row == 1 {
+            let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "CalendarViewController") as!
+            CalendarViewController
+            guard let user = user else {return}
+            vc.presenter = CalendarPresenter(user: user)
+            show(vc, sender: self)
+        }
         if indexPath.row == 2 {
             let storyboard = UIStoryboard(name: "Home", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "WeightRoomViewController") as! WeightRoomViewController
@@ -73,6 +87,7 @@ extension LockerRoomViewController: UITableViewDelegate {
             vc.isForSelfScouting = false
             show(vc, sender: self)
         }
+
     }
 }
 extension LockerRoomViewController: UITableViewDataSource {

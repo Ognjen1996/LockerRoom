@@ -218,4 +218,5 @@ struct Position: Codable {
     var id: Int
     var name_small: String
     var name: String
+    var desc: String?
 }
