@@ -31,6 +31,7 @@ class RosterViewController: UIViewController {
         presenter?.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = UITableView.automaticDimension
     }
     private func statsForRoster() {
         
@@ -51,7 +52,11 @@ extension RosterViewController: UITableViewDataSource {
     }
 }
 extension RosterViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboad = UIStoryboard(name: "Home", bundle: nil)
+        let vc = storyboad.instantiateViewController(withIdentifier: "RosterStatsViewController") as! RosterStatsViewController
+        self.present(vc, animated: true)
+    }
 }
 extension RosterViewController: RosterPresenterDelegate {
     func rosterPresenter(_ presenter: RosterPresenter, data: RosterData) {
