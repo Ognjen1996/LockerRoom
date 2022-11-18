@@ -38,13 +38,18 @@ extension DetailsViewController: UITableViewDataSource {
             guard let exercises = selectedWeight?.exericise else {return 0}
             return exercises.count
         }
-//        if flag == 2 {
-//            guard let drills = selectedPractice?.drill else {return 1}
-//            return drills.count
-//        }
-        else {
-            return 1
+        if flag == 2 {
+            if let drills = selectedPractice?.drill?.count {
+                if drills > 0 {
+                    return drills
+                }
+                else {
+                    return 1
+                    
+                }
+            }
         }
+        return 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

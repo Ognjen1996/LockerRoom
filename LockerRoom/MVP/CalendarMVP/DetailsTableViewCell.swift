@@ -71,8 +71,8 @@ class DetailsTableViewCell: UITableViewCell {
         homeTeamImage.isHidden = true
         awayTeamImage.isHidden = true
         nameLabel.text = data.name
-        commentLabel.text = data.date
-        setsLabel.text = data.typeEvent
+        commentLabel.text = "No drills added for this Practice"
+        setsLabel.text = data.date
         guard let drills = data.drill else {return}
         if drills.count > 0 {
             nameLabel.text = drills[n].name + "\n"
