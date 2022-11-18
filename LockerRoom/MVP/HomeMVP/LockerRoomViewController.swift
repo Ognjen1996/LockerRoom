@@ -25,7 +25,7 @@ class LockerRoomViewController: UIViewController {
 
 extension LockerRoomViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
+        if indexPath.row == 0 || indexPath.row == 7 {
             let storyboard = UIStoryboard(name: "Home", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "RosterViewController") as! RosterViewController
             guard let user = user else {return}

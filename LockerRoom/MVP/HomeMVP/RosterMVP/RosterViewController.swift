@@ -55,6 +55,7 @@ extension RosterViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboad = UIStoryboard(name: "Home", bundle: nil)
         let vc = storyboad.instantiateViewController(withIdentifier: "RosterStatsViewController") as! RosterStatsViewController
+        vc.player = rosterData?.players[indexPath.row]
         self.present(vc, animated: true)
     }
 }

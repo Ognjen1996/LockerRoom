@@ -21,7 +21,7 @@ class PlaybookDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
-
+        collectionView.delegate = self
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 200, height: 200)
         collectionView.collectionViewLayout = layout
@@ -31,6 +31,7 @@ class PlaybookDetailsViewController: UIViewController {
     }
     
     func setupDetails() {
+        detailsLabel.numberOfLines = 0
         guard let data = data else {return}
         for action in data.play_book_sub_category {
             detailsLabel.text! += action.general_comment + "\n\n"
@@ -65,6 +66,11 @@ class PlaybookDetailsViewController: UIViewController {
         
     }
 }
+
+extension PlaybookDetailsViewController: UICollectionViewDelegate {
+    
+}
+
 extension PlaybookDetailsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imageArray.count

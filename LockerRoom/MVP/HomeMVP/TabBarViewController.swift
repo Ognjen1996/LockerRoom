@@ -9,6 +9,8 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         UITabBar.appearance().barTintColor = .black
         tabBar.tintColor = .white
+        tabBar.backgroundColor = .black
+        
         configureTabBar()
         // Do any additional setup after loading the view.
     }
