@@ -27,5 +27,15 @@ struct PracticeData: Codable {
     var user_id: Int
     var created_at: String
     var typeEvent: String
-    var drill: [String]
+    var drill: [DrillData]?
+}
+struct DrillData: Codable {
+    var id: Int
+    var name: String
+    var practice_id: Int
+    var comment: String
+    var minutes: Int
+    var user_id: Int
+    var created_at: String
+    var updated_at: String
 }

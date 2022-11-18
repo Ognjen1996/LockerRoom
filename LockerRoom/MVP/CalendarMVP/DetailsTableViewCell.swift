@@ -73,6 +73,12 @@ class DetailsTableViewCell: UITableViewCell {
         nameLabel.text = data.name
         commentLabel.text = data.date
         setsLabel.text = data.typeEvent
+        guard let drills = data.drill else {return}
+        if drills.count > 0 {
+            nameLabel.text = drills[n].name + "\n"
+            commentLabel.text = drills[n].comment + "\n"
+            setsLabel.text = "Minutes: " + String(drills[n].minutes)
+        }
     }
     func setupMedical(with data: MedicalData, n: Int) {
         homeTeamImage.isHidden = true

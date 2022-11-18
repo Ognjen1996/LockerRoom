@@ -38,6 +38,10 @@ extension DetailsViewController: UITableViewDataSource {
             guard let exercises = selectedWeight?.exericise else {return 0}
             return exercises.count
         }
+//        if flag == 2 {
+//            guard let drills = selectedPractice?.drill else {return 1}
+//            return drills.count
+//        }
         else {
             return 1
         }
