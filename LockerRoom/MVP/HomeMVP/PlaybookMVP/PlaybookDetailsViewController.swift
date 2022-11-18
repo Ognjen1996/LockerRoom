@@ -21,7 +21,7 @@ class PlaybookDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
-        collectionView.delegate = self
+//        collectionView.delegate = self
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 200, height: 200)
         collectionView.collectionViewLayout = layout
@@ -45,11 +45,12 @@ class PlaybookDetailsViewController: UIViewController {
         
         let hideimages = { (action: UIAction) in
             self.collectionView.isHidden = true
+            self.detailsLabel.isHidden = false
             self.setupDetails()
         }
         let showimages = { (action: UIAction) in
             self.collectionView.isHidden = false
-            self.detailsLabel.text = ""
+            self.detailsLabel.isHidden = true
         }
         
         menuButton.menu = UIMenu(children: [

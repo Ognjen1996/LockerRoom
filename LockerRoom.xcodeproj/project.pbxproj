@@ -183,6 +183,7 @@
 		243536D7290FDB880014DF4B /* MVP */ = {
 			isa = PBXGroup;
 			children = (
+				24D68BA62927B10F00D1EBEC /* ChatMVP */,
 				243536DC290FDBC80014DF4B /* LoginMVP */,
 				243536DD290FDBCE0014DF4B /* HomeMVP */,
 				24BB276D291936BD00D6C4CE /* CalendarMVP */,
@@ -249,7 +250,6 @@
 				240F0736291105E50057F0CD /* HomeView.swift */,
 				245EAC54291000E4009CDEC3 /* HomePresenter.swift */,
 				245EAC4D290FEA28009CDEC3 /* TabBarViewController.swift */,
-				245EAC56291001E6009CDEC3 /* ChatViewController.swift */,
 				24A67D76291CE850007771CD /* LockerRoomViewController.swift */,
 				24A67D74291CE834007771CD /* LoockerRoomTableViewCell.swift */,
 				2405036D29261D8300C230F0 /* RosterMVP */,
@@ -303,11 +303,19 @@
 			path = CalendarMVP;
 			sourceTree = "<group>";
 		};
+		24D68BA62927B10F00D1EBEC /* ChatMVP */ = {
+			isa = PBXGroup;
+			children = (
+				245EAC56291001E6009CDEC3 /* ChatViewController.swift */,
+				24DE18B92914F9F200A960C0 /* LeaguesTableViewCell.swift */,
+			);
+			path = ChatMVP;
+			sourceTree = "<group>";
+		};
 		24DE18BB2914F9FB00A960C0 /* LeaguesMVP */ = {
 			isa = PBXGroup;
 			children = (
 				24BB50802913D8C8006E68F2 /* LeaguesTableViewController.swift */,
-				24DE18B92914F9F200A960C0 /* LeaguesTableViewCell.swift */,
 			);
 			path = LeaguesMVP;
 			sourceTree = "<group>";

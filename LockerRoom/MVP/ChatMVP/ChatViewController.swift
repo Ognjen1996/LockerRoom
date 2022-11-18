@@ -6,20 +6,22 @@
 //
 
 import UIKit
+import PusherSwift
 
-class ChatViewController: UIViewController {
-
+class ChatViewController: UIViewController, PusherDelegate {
+    
     @IBOutlet weak var tableVIew: UITableView!
+    
+        var pusher: Pusher!
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        pusher = Pusher(key: "key")
+        
         tableVIew.delegate = self
         tableVIew.dataSource = self
     }
-
+    
 }
 
 
