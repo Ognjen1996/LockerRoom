@@ -21,10 +21,7 @@ class ChatViewController: UIViewController, PusherDelegate {
         tableVIew.delegate = self
         tableVIew.dataSource = self
     }
-    
 }
-
-
 extension ChatViewController: UITableViewDelegate {
     
 }
@@ -37,7 +34,6 @@ extension ChatViewController: UITableViewDataSource {
         let cell: LeaguesTableViewCell = tableView.dequeueReusableCell(withIdentifier: "LeaguesTableViewCell", for: indexPath) as! LeaguesTableViewCell
         cell.lastMessageLabel.text = "Eee sefe imam neku malu povredu"
         cell.nameChatLabel.text = "Nikola Ivanovic"
-//        let separator = cell.separatorInset.bottom
         
         return cell
     }

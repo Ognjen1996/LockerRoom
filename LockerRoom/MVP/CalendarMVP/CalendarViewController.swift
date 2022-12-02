@@ -52,7 +52,6 @@ class CalendarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupButton()
-        tableView.backgroundColor = .black
         presenter?.fetchData(for: "1")
         presenter?.delegate = self
         tableView.dataSource = self
